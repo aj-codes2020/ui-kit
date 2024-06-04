@@ -1,0 +1,15 @@
+.textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    resize: vertical; /* Allows vertical resizing */
+  }
+  
+  .textarea:focus {
+    border-color: #1ea7fd;
+    outline: none;
+  }
+  

@@ -1,0 +1,55 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+
+<Meta of={AccordionStories} />
+
+# Accordion
+
+The Accordion component allows you to create expandable and collapsible sections, useful for presenting information in a compact and organized manner.
+
+<Canvas of={AccordionStories.Default} />
+
+
+## Usage
+
+To use the Accordion component, import it and pass an array of items with `title` and `content` properties.
+
+```tsx
+import { Accordion } from 'path-to-your-components';
+
+const items = [
+  { title: 'Section 1', content: 'Content for section 1' },
+  { title: 'Section 2', content: 'Content for section 2' },
+  { title: 'Section 3', content: 'Content for section 3' },
+];
+
+<Accordion items={items} />;
+```
+
+## Props
+The Accordion component accepts the following props:
+
+### items
+**Type**: title: string; content: React.ReactNode; \
+**Description**: An array of items to be displayed in the accordion. Each item should have a title and content.\
+**Required**: Yes
+
+### className
+**Type**: string\
+**Description**: Additional CSS classes to apply to the accordion container. Use this prop to further customize the accordion's appearance.\
+**Required**: No\
+**Default(()): ''
+
+
+## Customization
+
+You can customize the Tabs component using CSS. The following class names are available for customization:
+
+`accordion`: The main container for the accordion.\
+`accordion-item`: The container for each accordion item.\
+`accordion-title`: The title of each accordion item.\
+`accordion-title.active`: The title of the active accordion item.\
+`accordion-icon`: The icon displayed at the end of the accordion title.\
+`accordion-content`: The content area of each accordion item.\
+`accordion-content.active`: The content area of the active accordion item.
+

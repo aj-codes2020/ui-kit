@@ -1,0 +1,33 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as RatingStories from './Rating.stories';
+
+<Meta of={RatingStories} />
+
+# Rating
+
+The Rating component allows users to rate items such as products or services. Users can select a number of stars to represent their rating.
+
+<Canvas of={RatingStories.Default} />
+
+## Usage
+
+To use the Rating component, import it and provide the necessary props such as `maxRating`, `value`, and `onChange`.
+
+```tsx
+import { Rating } from 'path-to-your-components';
+
+const App = () => {
+  const [rating, setRating] = useState(3);
+
+  return <Rating maxRating={5} value={rating} onChange={setRating} />;
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`rating`: The main container for the rating component.\
+`star`: The individual star element.\
+`star.filled`: The filled state of the star element.\
+`star:hover`: The hover state of the star element.

@@ -1,0 +1,54 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+# Select
+
+The Select component allows users to choose from a list of options, with support for single or multiple selections.
+
+<Canvas of={SelectStories.SingleSelect} />
+
+## Usage
+
+To use the Select component, import it and provide the necessary props such as `options`, `isMulti`, and `placeholder`.
+
+```tsx
+import { Select } from 'path-to-your-components';
+
+const options = [
+  { value: 'apple', label: 'Apple' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'cherry', label: 'Cherry' },
+  { value: 'date', label: 'Date' },
+  { value: 'elderberry', label: 'Elderberry' },
+];
+
+const App = () => {
+  const handleSelectChange = (selected) => {
+    console.log(`Selected value(s): ${selected}`);
+  };
+
+  return (
+    <Select
+      options={options}
+      isMulti={false}
+      placeholder="Select a fruit..."
+      onChange={handleSelectChange}
+    />
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`select-container`: The main container for the select component.\
+`select-control`: The control area of the select component, showing the selected value(s) and the dropdown arrow.\
+`select-control .placeholder`: The placeholder text when no value is selected.\
+`select-control .arrow`: The arrow icon indicating the dropdown state.\
+`select-menu`: The dropdown menu containing the list of options.\
+`select-option`: Each individual option in the dropdown menu.\
+`select-option:hover`: The option when hovered over.\
+`select-option.selected`: The option when selected.

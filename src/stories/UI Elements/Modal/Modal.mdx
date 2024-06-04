@@ -1,0 +1,44 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+The Modal component provides a way to create modal dialogs for user interactions such as forms, notifications, or confirmations.
+
+<Canvas of={ModalStories.Default} />
+
+## Usage
+
+To use the Modal component, import it and manage its open state using a state management solution such as React's useState hook.
+
+```tsx
+import { useState } from 'react';
+import { Modal } from 'path-to-your-components';
+
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setIsOpen(true)}>Open Modal</button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Modal Title">
+        <p>This is the content of the modal.</p>
+        <button onClick={() => setIsOpen(false)}>Close</button>
+      </Modal>
+    </>
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`modal-overlay`: The overlay behind the modal.\
+`modal`: The main container for the modal content.\
+`modal-header`: The header of the modal, containing the title.\
+`modal-body`: The body of the modal, containing the main content.\
+`modal-footer`: The footer of the modal, typically used for action buttons.\
+`modal-close`: The button to close the modal.

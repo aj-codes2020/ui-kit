@@ -1,0 +1,42 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+The Button component is a versatile element used to trigger actions in your application. It supports various sizes, colors, and styles.
+
+<Canvas of={ButtonStories.Primary} />
+<Canvas of={ButtonStories.Secondary} />
+
+
+## Usage
+
+To use the Button component, import it and pass the appropriate props such as `primary`, `size`, `backgroundColor`, `label`, and `onClick`.
+
+```tsx
+import { Button } from 'path-to-your-components';
+
+<Button 
+  primary 
+  label="Primary Button" 
+  onClick={() => alert('Button clicked')} 
+/>;
+
+<Button 
+  label="Secondary Button" 
+  onClick={() => alert('Button clicked')} 
+/>;
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`storybook-button`: The main container for the button.\
+`storybook-button--primary`: The primary style button.\
+`storybook-button--secondary`: The secondary style button.\
+`storybook-button--small`: The small size button.\
+`storybook-button--medium`: The medium size button.\
+`storybook-button--large`: The large size button.

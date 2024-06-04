@@ -1,0 +1,41 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as DatePickerStories from './DatePicker.stories';
+
+<Meta of={DatePickerStories} />
+
+# DatePicker
+
+The DatePicker component allows users to select a date, with optional time selection and customizable date format.
+
+<Canvas of={DatePickerStories.Default} />
+
+<Canvas of={DatePickerStories.DateTimePicker} />
+
+## Usage
+
+To use the DatePicker component, import it and pass the necessary props, such as `selected`, `onChange`, `showTimeSelect`, `dateFormat`, and `className`.
+
+```tsx
+import { DatePicker } from 'path-to-your-components';
+
+const App = () => {
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+
+  return (
+    <DatePicker
+      selected={selectedDate}
+      onChange={setSelectedDate}
+      showTimeSelect={false}
+      dateFormat="MM/dd/yyyy"
+      className=""
+    />
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`date-picker-container`: The main container for the date picker.\
+`date-picker-input`: The input field for the date picker.

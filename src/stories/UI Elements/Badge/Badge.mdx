@@ -1,0 +1,46 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+The Badge component is used to display status indicators or counters, useful for showing notifications or status information.
+
+<Canvas of={BadgeStories.Default} />
+<Canvas of={BadgeStories.PrimaryCounter} />
+<Canvas of={BadgeStories.SuccessStatus} />
+<Canvas of={BadgeStories.WarningCounter} />
+<Canvas of={BadgeStories.DangerStatus} />
+
+## Usage
+
+To use the Badge component, import it and pass the `children`, `type`, `color`, `size`, and `className` properties.
+
+```tsx
+import { Badge } from 'path-to-your-components';
+
+<Badge 
+  type="status" 
+  color="default" 
+  size="medium" 
+  className=""
+>
+  Default
+</Badge>;
+```
+
+## Customization
+
+You can customize the Badge component using CSS. The following class names are available for customization:
+
+`badge`: The main container for the badge.\
+`badge.status`: The status type badge.\
+`badge.default`: The default color badge.\
+`badge.primary`: The primary color badge.\
+`badge.success`: The success color badge.\
+`badge.warning`: The warning color badge.\
+`badge.danger`: The danger color badge.\
+`badge.small`: The small size badge.\
+`badge.medium`: The medium size badge.\
+`badge.large`: The large size badge.

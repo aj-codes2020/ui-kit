@@ -1,0 +1,34 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as FileUploadStories from './FileUpload.stories';
+
+<Meta of={FileUploadStories} />
+
+# File Upload
+
+The File Upload component allows you to upload files, with support for multiple files and custom class names.
+
+<Canvas of={FileUploadStories.Default} />
+
+## Usage
+
+To use the File Upload component, import it and handle the file selection via the `onFileSelect` prop.
+
+```tsx
+import { FileUpload } from 'path-to-your-components';
+
+const handleFileSelect = (file: File | null) => {
+  console.log(file);
+};
+
+<FileUpload onFileSelect={handleFileSelect} />;
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`file-upload`: The main container for the file upload component.\
+`file-input`: The input element for file selection.\
+`file-info`: The container for displaying selected file information.\
+`file-info p`: The paragraph displaying the file names.\
+`file-info button`: The button to remove selected files.

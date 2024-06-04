@@ -1,0 +1,37 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as ToggleSwitchStories from './ToggleSwitch.stories';
+
+<Meta of={ToggleSwitchStories} />
+
+# Toggle Switch
+
+The Toggle Switch component allows you to create a switch that toggles between an "on" and "off" state, useful for settings and preferences.
+
+<Canvas of={ToggleSwitchStories.Default} />
+
+## Usage
+
+To use the Toggle Switch component, import it and provide the necessary props such as `initialState`, `onToggle`, and `className`.
+
+```tsx
+import { ToggleSwitch } from 'path-to-your-components';
+
+const App = () => {
+  const handleToggle = (isOn: boolean) => {
+    console.log(`Toggle Switch is now ${isOn ? 'On' : 'Off'}`);
+  };
+
+  return (
+    <ToggleSwitch initialState={false} onToggle={handleToggle} className="custom-toggle" />
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`toggle-switch`: The main container for the toggle switch.\
+`toggle-switch.on`: The container when the toggle switch is in the "on" state.\
+`toggle-switch.off`: The container when the toggle switch is in the "off" state.\
+`toggle-thumb`: The thumb element inside the toggle switch.

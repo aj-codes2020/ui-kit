@@ -1,0 +1,54 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as CarouselStories from './Carousel.stories';
+
+<Meta of={CarouselStories} />
+
+# Carousel
+
+The Carousel component allows you to create a slideshow of items that can autoplay and includes navigation options, providing a versatile way to display multiple pieces of content in a compact space.
+
+<Canvas of={CarouselStories.TextCarousel} />
+
+<Canvas of={CarouselStories.ImageCarousel} />
+
+## Usage
+
+To use the Carousel component, import it and pass an array of items. You can also control various options such as autoplay, navigation type, and interval.
+
+```tsx
+import { Carousel } from 'path-to-your-components';
+
+const textItems = [
+  <div style={{ padding: '2rem', backgroundColor: '#f0f0f0', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Text Item 1</div>,
+  <div style={{ padding: '2rem', backgroundColor: '#c0c0c0', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Text Item 2</div>,
+  <div style={{ padding: '2rem', backgroundColor: '#f0f0f0', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Text Item 3</div>,
+];
+
+<Carousel
+  items={textItems}
+  autoplay={true}
+  autoplayInterval={3000}
+  showNavigation={true}
+  navigationType="dots"
+  navigationPosition="bottom"
+  className=""
+/>;
+```
+
+## Customization
+
+You can customize the Tabs component using CSS. The following class names are available for customization:
+
+`carousel`: The main container for the carousel.\
+`carousel-content`: The container that holds all the carousel items.\
+`carousel-item`: The container for each carousel item.\
+`carousel-item.active`: The container for the active carousel item.\
+`carousel-navigation`: The container for the navigation controls.\
+`carousel-navigation.bottom`: The container for the navigation controls when positioned at the bottom.\
+`carousel-dots`: The container for the dot navigation controls.\
+`dot`: The individual dot navigation control.\
+`dot.active`: The active dot navigation control.\
+`carousel-pictures`: The container for the picture navigation controls.\
+`picture-thumbnail`: The individual picture navigation control.\
+`picture-thumbnail.active`: The active picture navigation control.
+

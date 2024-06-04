@@ -1,0 +1,40 @@
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-title {
+  padding: 10px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title:hover {
+  background-color: #ddd;
+}
+
+.accordion-title.active {
+  background-color: #ddd;
+}
+
+.accordion-icon {
+  transition: transform 0.3s;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 10px;
+}
+
+.accordion-content.active {
+  padding: 10px;
+}

@@ -1,0 +1,68 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as GridStories from './Grid.stories';
+
+<Meta of={GridStories} />
+
+# Grid
+
+The Grid component allows you to create a flexible grid layout with customizable gap between items. It is useful for displaying content in a structured and responsive manner.
+
+<Canvas of={GridStories.Default} />
+
+## Usage
+
+To use the Grid component, import it and pass the necessary props for `gap` and `children`.
+
+```tsx
+import { Grid } from 'path-to-your-components';
+
+const gridChildren = (
+  <>
+    <div className="col-3" style={{ backgroundColor: '#f0f0f0', padding: '1rem' }}>Item 1</div>
+    <div className="col-3" style={{ backgroundColor: '#c0c0c0', padding: '1rem' }}>Item 2</div>
+    <div className="col-3" style={{ backgroundColor: '#f0f0f0', padding: '1rem' }}>Item 3</div>
+  </>
+);
+
+<Grid gap="1rem" className="">
+  {gridChildren}
+</Grid>;
+```
+
+## Props
+
+The `Grid` component accepts the following props:
+
+### columns
+
+**Type**: `number`\
+**Description**: Specifies the number of columns for the grid. This prop is optional as column widths can be managed using CSS classes.\
+**Required**: No
+
+### gap
+
+**Type**: `string`\
+**Description**: Specifies the gap between grid items. This can be any valid CSS value for gap (e.g., `1rem`, `10px`, etc.).\
+**Required**: No\
+**Default**: `'1rem'`
+
+### className
+
+**Type**: `string`\
+**Description**: Additional CSS classes to apply to the grid container. Use this prop to further customize the grid's appearance.\
+**Required**: No\
+**Default**: `''`
+
+### children
+
+**Type**: `ReactNode`\
+**Description**: The grid items to be displayed within the grid container.\
+**Required**: Yes
+
+
+## Customization
+
+You can customize the Grid component using CSS. The following class names are available for customization:
+
+`grid-container`: The main container for the grid.\
+`.col-*`: The class names for column widths, ranging from col-1 to col-12 for different screen sizes.

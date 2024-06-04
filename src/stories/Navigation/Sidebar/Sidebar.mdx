@@ -1,0 +1,38 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as SidebarStories from './Sidebar.stories';
+
+<Meta of={SidebarStories} />
+
+# Sidebar
+
+The Sidebar component provides a layout with a sidebar and a header. The sidebar contains navigation links, and the header includes a hamburger menu to toggle the sidebar visibility on mobile devices. The sidebar also includes a title section above the links.
+
+<Canvas of={SidebarStories.Default} />
+
+## Usage
+
+To use the Sidebar component, import it and pass the necessary props for `sidebarTitle`, `sidebarLinks`, `headerContent`, `bodyContainer`, and `className`.
+
+```tsx
+import Sidebar from 'path-to-your-components';
+
+const sidebarLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Link 1', href: '/link1' },
+  { label: 'Link 2', href: '/link2' },
+  { label: 'Link 3', href: '/link3' },
+  { label: 'Link 4', href: '/link4' },
+];
+
+<Sidebar
+  sidebarTitle="My Sidebar"
+  sidebarLinks={sidebarLinks}
+  headerContent={<div>Welcome, Jane Doe!</div>}
+  bodyContainer={<div>This is some additional content below the title</div>}
+>
+  <div>
+    <h2>Main Content</h2>
+    <p>This is the main content area.</p>
+  </div>
+</Sidebar>;
+```

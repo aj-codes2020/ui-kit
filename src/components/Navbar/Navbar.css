@@ -1,0 +1,154 @@
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 45px;
+}
+
+.navbar .logo {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar .logo h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0;
+  vertical-align: top;
+}
+
+.navbar .column-center,
+.navbar .column-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .column-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar .column-right {
+  position: absolute;
+  right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar a.active {
+  text-decoration: underline;
+}
+
+.navbar .hamburger-menu {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50px;
+}
+
+.menu-header .logo {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu-header .logo h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0;
+  vertical-align: top;
+}
+
+.menu-column {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-column a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-column a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar .column-center,
+  .navbar .column-right {
+    display: none;
+  }
+
+  .navbar .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-size: 27px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    overflow: auto;
+    flex-direction: column;
+  }
+
+  .menu.open {
+    transform: translateX(0);
+  }
+
+  .menu .close-menu {
+    position: absolute;
+    right: 20px;
+    font-size: 27px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+  }
+}

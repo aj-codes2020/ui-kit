@@ -1,0 +1,42 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as TableStories from './Table.stories';
+
+<Meta of={TableStories} />
+
+# Table
+
+The Table component allows you to display and manipulate tabular data with features such as sorting, filtering, and pagination.
+
+<Canvas of={TableStories.Default} />
+
+## Usage
+
+To use the Table component, import it and pass an array of columns and data objects.
+
+```tsx
+import { Table } from 'path-to-your-components';
+
+const columns = ['Name', 'Age', 'Country'];
+const data = [
+  { Name: 'John Doe', Age: '28', Country: 'USA' },
+  { Name: 'Anna Smith', Age: '22', Country: 'UK' },
+  { Name: 'Paul Brown', Age: '35', Country: 'Canada' },
+  // Add more sample data as needed
+];
+
+<Table columns={columns} data={data} />;
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`table-container`: The main container for the table.\
+`table-filter`: The filter input field.\
+`table`: The table element.\
+`table th, table td`: Table header and data cells.\
+`table th:hover`: Hover state for table headers.\
+`pagination`: The container for pagination controls.\
+`pagination button`: Pagination buttons.\
+`pagination button:disabled`: Disabled state for pagination buttons.\
+`pagination span`: Pagination information text.

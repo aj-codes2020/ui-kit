@@ -1,0 +1,34 @@
+/* Container layout */
+.alert {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.alert-info {
+  background-color: #e7f3fe;
+  color: #3178c6;
+  border-color: #bee3f8;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}

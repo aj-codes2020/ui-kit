@@ -1,0 +1,38 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+The Avatar component is used to display user profile images in different shapes and sizes.
+
+<Canvas of={AvatarStories.Default} />
+<Canvas of={AvatarStories.Square} />
+
+## Usage
+
+To use the Avatar component, import it and pass the `src`, `alt`, `size`, `shape`, and `className` properties.
+
+```tsx
+import { Avatar } from 'path-to-your-components';
+
+<Avatar 
+  src="https://via.placeholder.com/150" 
+  alt="User Avatar" 
+  size="medium" 
+  shape="circle" 
+  className=""
+/>;
+```
+
+## Customization
+
+You can customize the Avatar component using CSS. The following class names are available for customization:
+
+`avatar`: The main container for the avatar.\
+`avatar.small`: The small size avatar.\
+`avatar.medium`: The medium size avatar.\
+`avatar.large`: The large size avatar.\
+`avatar.circle`: The circle shape avatar.\
+`avatar.square`: The square shape avatar.

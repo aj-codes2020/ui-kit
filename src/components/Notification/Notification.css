@@ -1,0 +1,39 @@
+.notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 16px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+  }
+  
+  .notification-info {
+    background-color: #3178c6;
+  }
+  
+  .notification-success {
+    background-color: #28a745;
+  }
+  
+  .notification-warning {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  .notification-error {
+    background-color: #dc3545;
+  }
+  
+  .notification-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: inherit;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  

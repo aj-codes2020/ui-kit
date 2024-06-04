@@ -1,0 +1,35 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as PopoverStories from './Popover.stories';
+
+<Meta of={PopoverStories} />
+
+# Popover
+
+The Popover component allows you to display additional content when users click or hover over an element. It's useful for providing more information or options without cluttering the UI.
+
+<Canvas of={PopoverStories.Default} />
+
+## Usage
+
+To use the Popover component, import it and pass the content to be displayed in the popover along with the element that triggers it.
+
+```tsx
+import { Popover } from 'path-to-your-components';
+
+const App = () => (
+  <Popover content="This is a popover" position="bottom">
+    <button>Click me</button>
+  </Popover>
+);
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`popover-container`: The main container for the popover.\
+`popover-box`: The container for the popover content.\
+`popover-top`: Applied when the popover is positioned at the top.\
+`popover-bottom`: Applied when the popover is positioned at the bottom.\
+`popover-left`: Applied when the popover is positioned at the left.\
+`popover-right`: Applied when the popover is positioned at the right.

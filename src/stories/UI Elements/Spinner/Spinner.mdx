@@ -1,0 +1,39 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as SpinnerStories from './Spinner.stories';
+
+<Meta of={SpinnerStories} />
+
+# Spinner
+
+The Spinner component is used to indicate loading or processing states in your application.
+
+<Canvas of={SpinnerStories.Default} />
+
+## Usage
+
+To use the Spinner component, import it and provide the necessary props such as `size` and `color`.
+
+```tsx
+import { Spinner } from 'path-to-your-components';
+
+const App = () => {
+  return (
+    <Spinner size="medium" color="primary" />
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`spinner`: The main container for the spinner component.\
+`spinner-circle`: The animated circle of the spinner.\
+`spinner.small .spinner-circle`: Styles for the small spinner.\
+`spinner.medium .spinner-circle`: Styles for the medium spinner.\
+`spinner.large .spinner-circle`: Styles for the large spinner.\
+`spinner.primary .spinner-circle`: Styles for the primary color.\
+`spinner.secondary .spinner-circle`: Styles for the secondary color.\
+`spinner.success .spinner-circle`: Styles for the success color.\
+`spinner.warning .spinner-circle`: Styles for the warning color.\
+`spinner.danger .spinner-circle`: Styles for the danger color.

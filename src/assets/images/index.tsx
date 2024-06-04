@@ -1,0 +1,1 @@
+export { default as ArtboardLogo2x } from './artboard-logo-2x.png';

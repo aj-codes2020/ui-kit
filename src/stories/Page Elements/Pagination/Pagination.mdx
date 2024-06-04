@@ -1,0 +1,39 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+The Pagination component allows you to manage navigation through pages of content, providing controls for moving between pages and indicating the current page.
+
+<Canvas of={PaginationStories.Default} />
+
+## Usage
+
+To use the Pagination component, import it and pass the necessary props for `totalItems`, `itemsPerPage`, `currentPage`, and `onPageChange`.
+
+```tsx
+import { Pagination } from 'path-to-your-components';
+
+const handlePageChange = (page: number) => {
+  console.log(`Current page is ${page}`);
+};
+
+<Pagination
+  totalItems={50}
+  itemsPerPage={10}
+  currentPage={1}
+  onPageChange={handlePageChange}
+  className=""
+/>;
+```
+
+## Pagination Class Names Customization
+
+You can customize the Tabs component using CSS. The following class names are available for customization:
+
+`pagination-container`: The main container for the pagination component.\
+`pagination-button`: The button element for each page and navigation control.\
+`pagination-button.active`: The button element for the active page.\
+`pagination-button:disabled`: The button element when navigation is disabled.\

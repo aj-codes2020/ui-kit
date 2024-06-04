@@ -1,0 +1,40 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as SliderStories from './Slider.stories';
+
+<Meta of={SliderStories} />
+
+# Slider
+
+The Slider component allows users to select a value from a range by sliding a handle along a track.
+
+<Canvas of={SliderStories.Default} />
+
+## Usage
+
+To use the Slider component, import it and provide the necessary props such as `min`, `max`, `step`, and `value`.
+
+```tsx
+import { Slider } from 'path-to-your-components';
+
+const App = () => {
+  const [value, setValue] = useState(50);
+
+  return (
+    <Slider
+      min={0}
+      max={100}
+      step={1}
+      value={value}
+      onChange={setValue}
+    />
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`slider-container`: The main container for the slider component.\
+`slider`: The input element of the slider.\
+`slider-value`: The display value of the slider.

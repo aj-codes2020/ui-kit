@@ -1,0 +1,36 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as NavbarStories from './Navbar.stories';
+
+<Meta of={NavbarStories} />
+
+# Navbar
+
+The Navbar component is used to display the main navigation header for your application. It includes elements for branding and customizable columns for additional content.
+
+<Canvas of={NavbarStories.Default} />
+
+## Usage
+
+To use the Navbar component, import it and provide the necessary props.
+
+```tsx
+import Navbar from 'path-to-your-components/Navbar';
+
+<Navbar
+  logoSrc="https://via.placeholder.com/40"
+  logoAlt="Logo"
+  logoTitle="My Application"
+  centerColumn={[
+    { label: 'Center Link 1', href: '/center1', content: <div>Center Content 1</div> },
+    { label: 'Center Link 2', href: '/center2', content: <div>Center Content 2</div> },
+  ]}
+  rightColumn={[
+    { label: 'Right Link 1', href: '/right1', content: <div>Right Content 1</div> },
+    { label: 'Right Link 2', href: '/right2', content: <div>Right Content 2</div> },
+  ]}
+  menuColumn={[
+    { label: 'Menu Link 1', href: '/menu1', content: <div>Menu Content 1</div> },
+    { label: 'Menu Link 2', href: '/menu2', content: <div>Menu Content 2</div> },
+  ]}
+/>;
+```

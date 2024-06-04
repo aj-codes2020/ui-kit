@@ -1,0 +1,31 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+# Input
+
+The Input component allows you to create various types of input fields, including text, email, password, and number fields.
+
+<Canvas of={InputStories.TextInput} />
+
+## Usage
+
+To use the Input component, import it and use it in your form or other input-related UI.
+
+```tsx
+import { Input } from 'path-to-your-components';
+
+const handleChange = (value: string) => {
+  console.log(value);
+};
+
+<Input type="text" value="" onChange={handleChange} placeholder="Enter text..." />;
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`input`: The main input element.\
+`input`:focus: The focus state of the input element.

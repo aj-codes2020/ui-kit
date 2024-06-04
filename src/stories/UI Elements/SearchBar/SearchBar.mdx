@@ -1,0 +1,39 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as SearchBarStories from './SearchBar.stories';
+
+<Meta of={SearchBarStories} />
+
+# Search Bar
+
+The Search Bar component allows users to search and filter through a list of suggestions, providing an autocomplete functionality.
+
+<Canvas of={SearchBarStories.Default} />
+
+## Usage
+
+To use the Search Bar component, import it and provide the necessary props such as `suggestions`, `onSearch`, and `placeholder`.
+
+```tsx
+import { SearchBar } from 'path-to-your-components';
+
+const App = () => {
+  const handleSearch = (query: string) => {
+    console.log(`Search query: ${query}`);
+  };
+
+  const suggestions = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape', 'Honeydew'];
+
+  return <SearchBar suggestions={suggestions} onSearch={handleSearch} placeholder="Search for a fruit..." />;
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`search-bar`: The main container for the search bar.\
+`search-input`: The input field for the search bar.\
+`suggestions-list`: The container for the list of suggestions.\
+`suggestion`: Each individual suggestion item.\
+`suggestion.active`: The active suggestion item.\
+`suggestion:hover`: The suggestion item when hovered over.

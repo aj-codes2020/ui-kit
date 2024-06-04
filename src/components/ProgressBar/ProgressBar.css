@@ -1,0 +1,91 @@
+/* Linear Progress Bar */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-bar.small {
+    height: 10px;
+  }
+  
+  .progress-bar.medium {
+    height: 20px;
+  }
+  
+  .progress-bar.large {
+    height: 30px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    transition: width 0.5s;
+  }
+  
+  .progress-bar.primary .progress-bar-fill {
+    background-color: #007bff;
+  }
+  
+  .progress-bar.secondary .progress-bar-fill {
+    background-color: #6c757d;
+  }
+  
+  .progress-bar.success .progress-bar-fill {
+    background-color: #28a745;
+  }
+  
+  .progress-bar.warning .progress-bar-fill {
+    background-color: #ffc107;
+  }
+  
+  .progress-bar.danger .progress-bar-fill {
+    background-color: #dc3545;
+  }
+  
+  /* Circular Progress Bar */
+  .progress-circle {
+    display: inline-block;
+  }
+  
+  .progress-circle-bg {
+    fill: none;
+    stroke: #e0e0e0;
+  }
+  
+  .progress-circle-fg {
+    fill: none;
+    transition: stroke-dashoffset 0.5s;
+  }
+  
+  .progress-circle.small .progress-circle-fg {
+    stroke-width: 4;
+  }
+  
+  .progress-circle.medium .progress-circle-fg {
+    stroke-width: 6;
+  }
+  
+  .progress-circle.large .progress-circle-fg {
+    stroke-width: 8;
+  }
+  
+  .progress-circle.primary .progress-circle-fg {
+    stroke: #007bff;
+  }
+  
+  .progress-circle.secondary .progress-circle-fg {
+    stroke: #6c757d;
+  }
+  
+  .progress-circle.success .progress-circle-fg {
+    stroke: #28a745;
+  }
+  
+  .progress-circle.warning .progress-circle-fg {
+    stroke: #ffc107;
+  }
+  
+  .progress-circle.danger .progress-circle-fg {
+    stroke: #dc3545;
+  }
+  

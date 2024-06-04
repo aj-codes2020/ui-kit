@@ -1,0 +1,39 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as TextAreaStories from './TextArea.stories';
+
+<Meta of={TextAreaStories} />
+
+# Text Area
+
+The Text Area component is used for multiline text input, allowing users to enter large amounts of text.
+
+<Canvas of={TextAreaStories.Default} />
+
+## Usage
+
+To use the Text Area component, import it and provide the necessary props such as `value`, `onChange`, `placeholder`, `rows`, and `cols`.
+
+```tsx
+import { TextArea } from 'path-to-your-components';
+
+const App = () => {
+  const [value, setValue] = useState('');
+
+  return (
+    <TextArea
+      value={value}
+      onChange={setValue}
+      placeholder="Enter text here..."
+      rows={4}
+      cols={50}
+    />
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`textarea`: The main container for the textarea element.\
+`textarea:focus`: The focused state of the textarea element.

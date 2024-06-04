@@ -1,0 +1,37 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as TooltipStories from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+The Tooltip component provides additional information when users hover over or focus on an element, typically with a short description or hint.
+
+<Canvas of={TooltipStories.Default} />
+
+## Usage
+
+To use the Tooltip component, import it and wrap it around the element you want to have a tooltip. Pass the tooltip content and position as props.
+
+```tsx
+import { Tooltip, Button } from 'path-to-your-components';
+
+const App = () => {
+  return (
+    <Tooltip content="This is a tooltip" position="top">
+      <Button label="Hover Over Me" onClick={() => {}} primary />
+    </Tooltip>
+  );
+};
+```
+
+## Customization
+
+You can customize the Button component using CSS. The following class names are available for customization:
+
+`tooltip-container`: The main container for the tooltip and the element it wraps.\
+`tooltip-box`: The tooltip box that contains the content.\
+`tooltip-top`: Tooltip box when positioned at the top.\
+`tooltip-bottom`: Tooltip box when positioned at the bottom.\
+`tooltip-left`: Tooltip box when positioned at the left.\
+`tooltip-right`: Tooltip box when positioned at the right.

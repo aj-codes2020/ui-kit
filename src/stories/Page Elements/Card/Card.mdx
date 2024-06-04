@@ -1,0 +1,59 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+# Card
+
+The Card component is a versatile container that can include a header, body, and footer. It is useful for displaying content in a structured and visually appealing manner.
+
+<Canvas of={CardStories.Default} />
+<Canvas of={CardStories.WithoutHeader} />
+<Canvas of={CardStories.WithoutFooter} />
+
+
+## Usage
+
+To use the Card component, import it and pass the necessary props for `header`, `children`, and `footer`.
+
+```tsx
+import { Card } from 'path-to-your-components';
+
+<Card
+  header="Card Header"
+  footer="Card Footer"
+  className=""
+>
+  This is the body of the card.
+</Card>;
+```
+
+## Props
+
+The Card component accepts the following props:
+
+### header
+**Type**: React.ReactNode\
+**Description**: The content to display in the header of the card.\
+**Required**: No
+
+## footer
+**Type**: React.ReactNode\
+**Description**: The content to display in the footer of the card.\
+**Required**: No
+
+## children
+**Type**: React.ReactNode\
+**Description**: The content to display in the body of the card.
+**Required** : Yes
+
+
+
+## Customization
+
+You can customize the Tabs component using CSS. The following class names are available for customization:
+
+`card`: The main container for the card.\
+`card-header`: The container for the card's header.\
+`card-body`: The container for the card's body.\
+`card-footer`: The container for the card's footer.
