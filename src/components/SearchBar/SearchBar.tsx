@@ -46,10 +46,11 @@ const SearchBar = ({
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      setQuery(filteredSuggestions[activeSuggestion]);
+      const selectedSuggestion = filteredSuggestions[activeSuggestion] ?? '';
+      setQuery(selectedSuggestion);
       setFilteredSuggestions([]);
       setShowSuggestions(false);
-      onSearch(filteredSuggestions[activeSuggestion]);
+      onSearch(selectedSuggestion);
     } else if (e.key === 'ArrowUp') {
       if (activeSuggestion > 0) {
         setActiveSuggestion(activeSuggestion - 1);

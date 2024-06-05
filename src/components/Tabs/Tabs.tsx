@@ -32,7 +32,7 @@ const Tabs = ({ tabs, className = '' }: TabsProps) => {
         ))}
       </div>
       <div className="tabs-content">
-        {tabs[activeIndex] && tabs[activeIndex].content}
+        {tabs[activeIndex]?.content}
       </div>
     </div>
   );

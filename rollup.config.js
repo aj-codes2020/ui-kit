@@ -7,30 +7,38 @@ import packageJson from './package.json' assert { type: 'json' };
 
 export default [
   {
-    input: 'src/components/index.tsx',
+    input: 'src/index.ts',
     output: [
       {
         file: packageJson.main,
         format: 'cjs',
-        sourcemap: true,
-      },
-      {
+        sourcemap: true, 
+      }, 
+      { 
         file: packageJson.module,
         format: 'esm',
         sourcemap: true,
-      },
+      }, 
     ],
     plugins: [
       resolve(),
-      commonjs(),
-      typescript({ tsconfig: './tsconfig.json', exclude: ['**/*.test.tsx', '**/*.test.ts', '**/*.stories.ts'] }),
-      postcss({ extensions: ['.css'], inject: true, extract: false }),
+      commonjs(), 
+      typescript({
+        tsconfig: './tsconfig.json',
+        exclude: ['**/*.test.tsx', '**/*.test.ts', '**/*.stories.tsx'],
+      }),
+      postcss({
+        extensions: ['.css'],
+        inject: true,
+        extract: false, 
+      }), 
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/esm/types/index.d.ts',  // Ensure the path matches the output from tsconfig.json
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.css$/],
+    external: [/\.css$/], 
   },
 ];
+  

@@ -21,7 +21,7 @@ const FileUpload = ({
     if (files) {
       const fileArray = Array.from(files);
       setSelectedFiles(fileArray);
-      onFileSelect(multiple ? fileArray[0] : fileArray[0]);
+      onFileSelect(fileArray[0] ?? null);
     }
   };
 

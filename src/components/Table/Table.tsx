@@ -17,7 +17,7 @@ const Table = ({ columns, data, className = '' }: TableProps) => {
   const filteredData = useMemo(() => {
     return data.filter((row) =>
       columns.some((column) =>
-        row[column].toString().toLowerCase().includes(filterText.toLowerCase())
+        row[column]?.toString().toLowerCase().includes(filterText.toLowerCase())
       )
     );
   }, [data, columns, filterText]);
@@ -25,8 +25,12 @@ const Table = ({ columns, data, className = '' }: TableProps) => {
   const sortedData = useMemo(() => {
     if (!sortColumn) return filteredData;
     const sorted = [...filteredData].sort((a, b) => {
-      if (a[sortColumn] < b[sortColumn]) return sortDirection === 'asc' ? -1 : 1;
-      if (a[sortColumn] > b[sortColumn]) return sortDirection === 'asc' ? 1 : -1;
+      const aValue = a[sortColumn];
+      const bValue = b[sortColumn];
+      if (aValue !== undefined && bValue !== undefined) {
+        if (aValue < bValue) return sortDirection === 'asc' ? -1 : 1;
+        if (aValue > bValue) return sortDirection === 'asc' ? 1 : -1;
+      }
       return 0;
     });
     return sorted;

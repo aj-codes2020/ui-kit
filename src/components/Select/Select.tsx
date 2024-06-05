@@ -38,7 +38,7 @@ const Select = ({
     }
     setSelected(newSelected);
     if (onChange) {
-      onChange(isMulti ? newSelected : newSelected[0]);
+      onChange(isMulti ? newSelected : newSelected[0] ?? '');
     }
   };
 
