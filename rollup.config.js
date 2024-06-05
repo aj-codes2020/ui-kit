@@ -13,32 +13,34 @@ export default [
         file: packageJson.main,
         format: 'cjs',
         sourcemap: true, 
-      }, 
-      { 
+      },
+      {
         file: packageJson.module,
         format: 'esm',
         sourcemap: true,
-      }, 
+      },
     ],
     plugins: [
       resolve(),
-      commonjs(), 
+      commonjs(),
       typescript({
         tsconfig: './tsconfig.json',
         exclude: ['**/*.test.tsx', '**/*.test.ts', '**/*.stories.tsx'],
+        sourceMap: true,
+        declaration: true,
+        declarationMap: true,
       }),
       postcss({
         extensions: ['.css'],
         inject: true,
-        extract: false, 
-      }), 
+        extract: false,
+      }),
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',  // Ensure the path matches the output from tsconfig.json
+    input: 'dist/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.css$/], 
+    external: [/\.css$/],
   },
 ];
-  
