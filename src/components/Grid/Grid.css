@@ -1,10 +1,10 @@
-/* For mobile phones: */
+/* General column styles */
 [class*="col-"] {
   width: 100%;
 }
 
+/* Tablet layout */
 @media only screen and (min-width: 600px) {
-  /* For tablets: */
   .col-s-1 { width: 8.33%; }
   .col-s-2 { width: 16.66%; }
   .col-s-3 { width: 25%; }
@@ -19,8 +19,8 @@
   .col-s-12 { width: 100%; }
 }
 
+/* Desktop layout */
 @media only screen and (min-width: 768px) {
-  /* For desktop: */
   .col-1 { width: 8.33%; }
   .col-2 { width: 16.66%; }
   .col-3 { width: 25%; }
@@ -35,11 +35,25 @@
   .col-12 { width: 100%; }
 }
 
-.grid-container {
+/* Grid container styles */
+.grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: var(--grid-gap);
-  width: 100%;
+}
+
+.col-12 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6,
+.col-3,
+.col-4,
+.col-5,
+.col-s-6,
+.col-s-3,
+.col-s-4,
+.col-s-5 {
+  box-sizing: border-box;
 }
