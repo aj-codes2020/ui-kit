@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Sidebar} from '../../../components';
+import {Sidebar}from '../../../components';
 
 const meta: Meta<typeof Sidebar> = {
   title: 'Components/Navigation/Sidebar',
@@ -8,6 +8,8 @@ const meta: Meta<typeof Sidebar> = {
     layout: 'fullscreen',
   },
   argTypes: {
+    logoSrc: { control: 'text' },
+    logoAlt: { control: 'text' },
     sidebarTitle: { control: 'text' },
     sidebarLinks: { control: 'object' },
     headerContent: { control: 'text' },
@@ -26,7 +28,9 @@ const Template: Story = {
 export const Default: Story = {
   ...Template,
   args: {
-    sidebarTitle: 'Sidebar',
+    logoSrc: 'https://via.placeholder.com/40',
+    logoAlt: 'Logo',
+    sidebarTitle: 'Sidebar Title',
     sidebarLinks: (
       <>
         <li><a href="/">Home</a></li>
@@ -44,7 +48,9 @@ export const Default: Story = {
 export const LoggedOut: Story = {
   ...Template,
   args: {
-    sidebarTitle: 'Sidebar',
+    logoSrc: 'https://via.placeholder.com/40',
+    logoAlt: 'Logo',
+    sidebarTitle: 'Sidebar Title',
     sidebarLinks: (
       <>
         <li><a href="/link1">Link 1</a></li>

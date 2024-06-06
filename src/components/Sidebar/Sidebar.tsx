@@ -2,6 +2,8 @@ import { useState, useEffect, ReactNode } from 'react';
 import './Sidebar.css';
 
 interface SidebarProps {
+  logoSrc?: string;
+  logoAlt?: string;
   sidebarTitle?: string;
   sidebarLinks: ReactNode;
   headerContent?: ReactNode;
@@ -9,7 +11,9 @@ interface SidebarProps {
 }
 
 const Sidebar = ({
-  sidebarTitle = 'Sidebar',
+  logoSrc,
+  logoAlt,
+  sidebarTitle = '',
   sidebarLinks,
   headerContent,
   className = '',
@@ -47,9 +51,12 @@ const Sidebar = ({
     <div className={`sidebar-layout ${className}`}>
       <aside className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-title">
-          {sidebarTitle}
+          <div className='sidebar-logo'>
+            {logoSrc && <img src={logoSrc} alt={logoAlt} />}
+            {sidebarTitle}
+          </div>
           <button className="close-menu" onClick={toggleSidebar}>
-            <div className="cross">x</div>
+            ×
           </button>
         </div>
         <nav className="sidebar-nav">
