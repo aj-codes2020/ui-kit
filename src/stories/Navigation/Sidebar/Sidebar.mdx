@@ -11,24 +11,26 @@ The Sidebar component provides a layout with a sidebar and a header. The sidebar
 
 ## Usage
 
-To use the Sidebar component, import it and pass the necessary props for `sidebarTitle`, `sidebarLinks`, `headerContent`, `bodyContainer`, and `className`.
+To use the Sidebar component, import it and pass the necessary props for `sidebarTitle`, `sidebarLinks`, `headerContent`, and `className`.
 
 ```tsx
 import Sidebar from 'path-to-your-components';
 
-const sidebarLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Link 1', href: '/link1' },
-  { label: 'Link 2', href: '/link2' },
-  { label: 'Link 3', href: '/link3' },
-  { label: 'Link 4', href: '/link4' },
-];
+const sidebarLinks = (
+  <>
+    <li><a href="/">Home</a></li>
+    <li><a href="/link1">Link 1</a></li>
+    <li><a href="/link2">Link 2</a></li>
+    <li><a href="/link3">Link 3</a></li>
+    <li><a href="/link4">Link 4</a></li>
+  </>
+);
 
 <Sidebar
   sidebarTitle="My Sidebar"
   sidebarLinks={sidebarLinks}
   headerContent={<div>Welcome, Jane Doe!</div>}
-  bodyContainer={<div>This is some additional content below the title</div>}
+  className=""
 >
   <div>
     <h2>Main Content</h2>

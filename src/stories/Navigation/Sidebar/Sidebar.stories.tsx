@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Sidebar} from '../../../components'; 
+import {Sidebar} from '../../../components';
 
 const meta: Meta<typeof Sidebar> = {
   title: 'Components/Navigation/Sidebar',
@@ -27,14 +27,16 @@ export const Default: Story = {
   ...Template,
   args: {
     sidebarTitle: 'Sidebar',
-    sidebarLinks: [
-      { label: 'Home', href: '/', content:<div><p>Home Page</p></div> },
-      { label: 'Link 1', href: '/link1', content:<div></div>  },
-      { label: 'Link 2', href: '/link2', content:<div></div>  },
-      { label: 'Link 3', href: '/link3', content:<div></div>  },
-      { label: 'Link 4', href: '/link4', content:<div></div>  },
-    ],
-    headerContent: <div></div>,
+    sidebarLinks: (
+      <>
+        <li><a href="/">Home</a></li>
+        <li><a href="/link1">Link 1</a></li>
+        <li><a href="/link2">Link 2</a></li>
+        <li><a href="/link3">Link 3</a></li>
+        <li><a href="/link4">Link 4</a></li>
+      </>
+    ),
+    headerContent: <div>Header Content</div>,
     className: '',
   },
 };
@@ -43,12 +45,14 @@ export const LoggedOut: Story = {
   ...Template,
   args: {
     sidebarTitle: 'Sidebar',
-    sidebarLinks: [
-      { label: 'Link 1', href: '/link1', content:<div></div>  },
-      { label: 'Link 2', href: '/link2', content:<div></div>  },
-      { label: 'Link 3', href: '/link3', content:<div></div>  },
-      { label: 'Link 4', href: '/link4', content:<div></div>  },
-    ],
+    sidebarLinks: (
+      <>
+        <li><a href="/link1">Link 1</a></li>
+        <li><a href="/link2">Link 2</a></li>
+        <li><a href="/link3">Link 3</a></li>
+        <li><a href="/link4">Link 4</a></li>
+      </>
+    ),
     headerContent: <div>Please log in.</div>,
     className: '',
   },

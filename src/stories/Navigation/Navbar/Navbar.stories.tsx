@@ -31,18 +31,24 @@ export const Default: Story = {
     logoSrc: 'https://via.placeholder.com/40',
     logoAlt: 'Logo',
     logoTitle: 'AJ.Codes',
-    centerColumn: [
-      { label: 'Center Link 1', href: '/center1', content: <div>Center Content 1</div> },
-      { label: 'Center Link 2', href: '/center2', content: <div>Center Content 2</div> },
-    ],
-    rightColumn: [
-      { label: 'Right Link 1', href: '/right1', content: <div>Right Content 1</div> },
-      { label: 'Right Link 2', href: '/right2', content: <div>Right Content 2</div> },
-    ],
-    menuColumn: [
-      { label: 'Menu Link 1', href: '/menu1', content: <div>Menu Content 1</div> },
-      { label: 'Menu Link 2', href: '/menu2', content: <div>Menu Content 2</div> },
-    ],
+    centerColumn: (
+      <>
+        <a href="/center1">Center Link 1</a>
+        <a href="/center2">Center Link 2</a>
+      </>
+    ),
+    rightColumn: (
+      <>
+        <a href="/right1">Right Link 1</a>
+        <a href="/right2">Right Link 2</a>
+      </>
+    ),
+    menuColumn: (
+      <>
+        <a href="/menu1">Menu Link 1</a>
+        <a href="/menu2">Menu Link 2</a>
+      </>
+    ),
     className: '',
   },
 };

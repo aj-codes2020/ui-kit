@@ -15,7 +15,7 @@ const meta: Meta<typeof Grid> = {
       control: { type: 'text' },
     },
   },
-};
+}; 
 
 export default meta;
 type Story = StoryObj<typeof meta>;

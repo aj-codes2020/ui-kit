@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
+import { useState, useEffect, ReactNode } from 'react';
 import './Sidebar.css';
 
 interface SidebarProps {
   sidebarTitle?: string;
-  sidebarLinks: { label: string, href: string, content: React.ReactNode }[];
-  headerContent?: React.ReactNode;
+  sidebarLinks: ReactNode;
+  headerContent?: ReactNode;
   className?: string;
 }
 
@@ -45,54 +44,33 @@ const Sidebar = ({
   }, []);
 
   return (
-    <Router>
-      <div className={`sidebar-layout ${className}`}>
-        <aside className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
-          <div className="sidebar-title">
-            {sidebarTitle}
-            <button className="close-menu" onClick={toggleSidebar}>
-                <div className='cross'>x</div>
-            </button>
-          </div>
-          <nav className="sidebar-nav">
-            <ul>
-              {sidebarLinks.map((link, index) => (
-                <li key={index}>
-                  <NavLink
-                    to={link.href}
-                    className={({ isActive }) => (isActive ? 'active' : '')}
-                    onClick={handleLinkClick}
-                  >
-                    {link.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
-
-        <div className="main-content">
-          <header className="header">
-            <button className="hamburger-menu" onClick={toggleSidebar}>☰</button>
-            <div className="header-content">
-              <div>{headerContent}</div>
-            </div>
-          </header>
-          <main>
-            <Routes>
-              {sidebarLinks.map((link, index) => (
-                <Route key={index} path={link.href} element={
-                  <div className='body-container'>
-                    <h1 className='body-title'>{link.label}</h1>
-                    {link.content}
-                  </div>
-                } />
-              ))}
-            </Routes>
-          </main>
+    <div className={`sidebar-layout ${className}`}>
+      <aside className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
+        <div className="sidebar-title">
+          {sidebarTitle}
+          <button className="close-menu" onClick={toggleSidebar}>
+            <div className="cross">x</div>
+          </button>
         </div>
+        <nav className="sidebar-nav">
+          <ul onClick={handleLinkClick}>
+            {sidebarLinks}
+          </ul>
+        </nav>
+      </aside>
+
+      <div className="main-content">
+        <header className="header">
+          <button className="hamburger-menu" onClick={toggleSidebar}>☰</button>
+          <div className="header-content">
+            {headerContent}
+          </div>
+        </header>
+        <main>
+          {/* Add your main content here */}
+        </main>
       </div>
-    </Router>
+    </div>
   );
 };
 
