@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Sidebar}from '../../../components';
+import {Sidebar} from '../../../components';
 
 const meta: Meta<typeof Sidebar> = {
   title: 'Components/Navigation/Sidebar',
@@ -42,6 +42,12 @@ export const Default: Story = {
     ),
     headerContent: <div>Header Content</div>,
     className: '',
+    children: (
+      <div>
+        <h1>Main Content</h1>
+        <p>This is the main content area.</p>
+      </div>
+    ),
   },
 };
 
@@ -61,5 +67,11 @@ export const LoggedOut: Story = {
     ),
     headerContent: <div>Please log in.</div>,
     className: '',
+    children: (
+      <div>
+        <h1>Main Content</h1>
+        <p>This is the main content area.</p>
+      </div>
+    ),
   },
 };

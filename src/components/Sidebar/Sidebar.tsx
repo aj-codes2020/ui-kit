@@ -8,6 +8,7 @@ interface SidebarProps {
   sidebarLinks: ReactNode;
   headerContent?: ReactNode;
   className?: string;
+  children: ReactNode;
 }
 
 const Sidebar = ({
@@ -17,6 +18,7 @@ const Sidebar = ({
   sidebarLinks,
   headerContent,
   className = '',
+  children
 }: SidebarProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
 
@@ -73,8 +75,8 @@ const Sidebar = ({
             {headerContent}
           </div>
         </header>
-        <main>
-          {/* Add your main content here */}
+        <main className="body-container">
+          {children}
         </main>
       </div>
     </div>

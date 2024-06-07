@@ -17,7 +17,7 @@
   width: 0;
 }
 
-.sidebar-logo{
+.sidebar-logo {
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -106,9 +106,8 @@
 }
 
 .body-container {
-  padding: 0 20px;
-  margin: 0 auto;
-  max-width: calc(100% - 40px);
+  padding: 0 30px;
+
 }
 
 /* Responsive design for mobile */
