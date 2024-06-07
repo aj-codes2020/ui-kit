@@ -17,6 +17,7 @@
   .col-s-10 { width: 83.33%; }
   .col-s-11 { width: 91.66%; }
   .col-s-12 { width: 100%; }
+  .col-container { width: 100%; } 
 }
 
 /* Desktop layout */
@@ -33,6 +34,7 @@
   .col-10 { width: 83.33%; }
   .col-11 { width: 91.66%; }
   .col-12 { width: 100%; }
+  .col-container { width: 100%; } 
 }
 
 /* Grid container styles */
@@ -42,7 +44,7 @@
   gap: var(--grid-gap);
 }
 
-.col-12 {
+.col-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -58,6 +60,7 @@
 .col-9, 
 .col-10, 
 .col-11, 
+.col-12,
 .col-s-1,
 .col-s-2,
 .col-s-3,
@@ -68,6 +71,7 @@
 .col-s-8,
 .col-s-9,
 .col-s-10,
-.col-s-11 {
+.col-s-11
+.col-s-12 {
   box-sizing: border-box;
 }
