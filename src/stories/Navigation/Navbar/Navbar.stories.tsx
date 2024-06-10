@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import {Navbar} from '../../../components'; // Adjust the import path if necessary
+import { Meta, StoryObj } from '@storybook/react';
+import { Navbar } from '../../../components';
 
 const meta: Meta<typeof Navbar> = {
   title: 'Components/Navigation/Navbar',
@@ -30,23 +30,23 @@ export const Default: Story = {
   args: {
     logoSrc: 'https://via.placeholder.com/40',
     logoAlt: 'Logo',
-    logoTitle: 'AJ.Codes',
+    logoTitle: 'Title',
     centerColumn: (
       <>
-        <a href="/center1">Center Link 1</a>
-        <a href="/center2">Center Link 2</a>
+        <a href="/center1">CenterLink1</a>
+        <a href="/center2">CenterLink2</a>
       </>
     ),
     rightColumn: (
       <>
-        <a href="/right1">Right Link 1</a>
-        <a href="/right2">Right Link 2</a>
+        <a href="/right1">RightLink1</a>
+        <a href="/right2">RightLink2</a>
       </>
     ),
     menuColumn: (
       <>
-        <a href="/menu1">Menu Link 1</a>
-        <a href="/menu2">Menu Link 2</a>
+        <a href="/menu1">MenuLink1</a>
+        <a href="/menu2">MenuLink2</a>
       </>
     ),
     className: '',

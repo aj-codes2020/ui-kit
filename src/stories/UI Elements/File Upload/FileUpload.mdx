@@ -5,16 +5,16 @@ import * as FileUploadStories from './FileUpload.stories';
 
 # File Upload
 
-The File Upload component allows you to upload files, with support for multiple files and custom class names.
+The `FileUpload` component allows you to upload files, with support for multiple files and custom class names.
 
 <Canvas of={FileUploadStories.Default} />
 
 ## Usage
 
-To use the File Upload component, import it and handle the file selection via the `onFileSelect` prop.
+To use the `FileUpload` component, import it and pass the necessary props:
 
 ```tsx
-import { FileUpload } from 'path-to-your-components';
+import { FileUpload } from '@aj-codes2020/ui-kit';
 
 const handleFileSelect = (file: File | null) => {
   console.log(file);
@@ -23,9 +23,57 @@ const handleFileSelect = (file: File | null) => {
 <FileUpload onFileSelect={handleFileSelect} />;
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `FileUpload` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`onFileSelect`</td>
+        <td>(file: File | null) => void</td>
+        <td>Callback function to handle file selection.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`accept`</td>
+        <td>string</td>
+        <td>The types of files that the server accepts (that can be submitted through the file upload).</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td>`multiple`</td>
+        <td>boolean</td>
+        <td>Allows the user to select more than one file.</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the file upload container.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `FileUpload` component using CSS. The following class names are available for customization:
 
 `file-upload`: The main container for the file upload component.\
 `file-input`: The input element for file selection.\

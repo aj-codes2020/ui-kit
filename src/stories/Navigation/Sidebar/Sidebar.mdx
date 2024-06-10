@@ -5,33 +5,33 @@ import * as SidebarStories from './Sidebar.stories';
 
 # Sidebar
 
-The Sidebar component provides a layout with a sidebar and a header. The sidebar contains navigation links, and the header includes a hamburger menu to toggle the sidebar visibility on mobile devices. The sidebar also includes a title section above the links.
+The `Sidebar` component provides a layout with a sidebar and a header. The sidebar contains navigation links, and the header includes a hamburger menu to toggle the sidebar visibility on mobile devices. The sidebar also includes a title section above the links.
 
 <Canvas of={SidebarStories.Default} />
 
 ## Usage
 
-To use the Sidebar component, import it and pass the necessary props for `logoSrc`, `logoAlt`, `sidebarTitle`, `sidebarLinks`, `headerContent`, and `className`.
+To use the `Sidebar` component, import it and pass the necessary props:
 
 ```tsx
-import Sidebar from 'path-to-your-components';
+import { Sidebar } from '@aj-codes2020/ui-kit';
 
 const sidebarLinks = (
   <>
-    <li><a href="/">Home</a></li>
-    <li><a href="/link1">Link 1</a></li>
-    <li><a href="/link2">Link 2</a></li>
-    <li><a href="/link3">Link 3</a></li>
-    <li><a href="/link4">Link 4</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Link1</a></li>
+    <li><a href="#">Link2</a></li>
+    <li><a href="#">Link3</a></li>
+    <li><a href="#">Link4</a></li>
   </>
 );
 
 <Sidebar
   logoSrc="https://via.placeholder.com/40"
   logoAlt="Logo"
-  sidebarTitle="My Sidebar"
+  sidebarTitle="Title"
   sidebarLinks={sidebarLinks}
-  headerContent={<div>Welcome, Jane Doe!</div>}
+  headerContent={<div>Header Content</div>}
   className=""
 >
   <div>
@@ -40,3 +40,94 @@ const sidebarLinks = (
   </div>
 </Sidebar>;
 ```
+
+## Props
+
+The `Sidebar` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`logoSrc`</td>
+        <td>string</td>
+        <td>URL for the logo image.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`logoAlt`</td>
+        <td>string</td>
+        <td>Alt text for the logo image.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`sidebarTitle`</td>
+        <td>string</td>
+        <td>Title displayed at the top of the sidebar.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td>`sidebarLinks`</td>
+        <td>ReactNode</td>
+        <td>Links to be displayed in the sidebar.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`headerContent`</td>
+        <td>ReactNode</td>
+        <td>Content to be displayed in the header.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the sidebar layout.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td>`children`</td>
+        <td>ReactNode</td>
+        <td>Main content to be displayed within the sidebar layout.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Sidebar` component using CSS. The following class names are available for customization:
+
+`sidebar-layout`: The main container for the sidebar layout.\
+`sidebar`: The sidebar itself. Use this class to style the sidebar.\
+`sidebar.closed`: Applied when the sidebar is closed.\
+`sidebar-logo`: The logo container in the sidebar.\
+`sidebar-title`: The title section of the sidebar.\
+`sidebar-title .close-menu`: The close menu button in the sidebar title section.\
+`sidebar-nav ul`: The unordered list containing the sidebar links.\
+`sidebar-nav li`: The list items containing the individual links.\
+`sidebar-nav a`: The anchor tags for the sidebar links.\
+`sidebar-nav li:hover, sidebar-nav li.active`: Styles applied to the sidebar links when hovered or active.\
+`main-content`: The main content container that adjusts when the sidebar is open or closed.\
+`main-content.full-width`: Applied to the main content container when the sidebar is closed.\
+`header`: The header section of the layout.\
+`header.full-width`: Applied to the header when the sidebar is closed.\
+`hamburger-menu`: The hamburger menu button for toggling the sidebar.\
+`header-content`: The container for additional header content.\
+`body-container`: The container for the main body content.

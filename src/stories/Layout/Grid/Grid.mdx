@@ -5,64 +5,89 @@ import * as GridStories from './Grid.stories';
 
 # Grid
 
-The Grid component allows you to create a flexible grid layout with customizable gap between items. It is useful for displaying content in a structured and responsive manner.
+The `Grid` component allows you to create a flexible grid layout with customizable gap between items. It is useful for displaying content in a structured and responsive manner.
 
 <Canvas of={GridStories.Default} />
 
 ## Usage
 
-To use the Grid component, import it and pass the necessary props for `gap` and `children`.
+To use the `Grid` component, import it and pass the necessary props:
 
 ```tsx
-import { Grid } from 'path-to-your-components';
+import { Grid } from '@aj-codes2020/ui-kit';
 
 const gridChildren = (
-  <> 
-    <div className="col-3" style={{ backgroundColor: '#f0f0f0', padding: '1rem' }}>Item 1</div>
-    <div className="col-3" style={{ backgroundColor: '#c0c0c0', padding: '1rem' }}>Item 2</div>
-    <div className="col-3" style={{ backgroundColor: '#f0f0f0', padding: '1rem' }}>Item 3</div>
-  </>
+  <div className="grid-container">
+     <div className="grid-d-6 grid-t-3 grid-m-12" style={{ backgroundColor: '#f0f0f0', height: '50px'}}>Item 1</div>
+     <div className="grid-d-6 grid-t-3 grid-m-12" style={{ backgroundColor: '#c0c0c0', height: '50px' }}>Item 2</div>
+     <div className="grid-d-6 grid-t-3 grid-m-12" style={{ backgroundColor: '#f0f0f0', height: '50px'}}>Item 3</div>
+     <div className="grid-d-6 grid-t-3 grid-m-12" style={{ backgroundColor: '#c0c0c0', height: '50px'}}>Item 4</div>
+   </div>
 );
 
-<Grid gap="1rem" className="">
+<Grid className="">
   {gridChildren}
-</Grid>;
+</Grid>
 ```
 
 ## Props
 
 The `Grid` component accepts the following props:
 
-### columns
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the grid container. Use this prop to further customize the grid's appearance.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td>`children`</td>
+        <td>ReactNode</td>
+        <td>The grid items to be displayed within the grid container.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-**Type**: `number`\
-**Description**: Specifies the number of columns for the grid. This prop is optional as column widths can be managed using CSS classes.\
-**Required**: No
+## Class Selectors
 
-### gap
-
-**Type**: `string`\
-**Description**: Specifies the gap between grid items. This can be any valid CSS value for gap (e.g., `1rem`, `10px`, etc.).\
-**Required**: No\
-**Default**: `'1rem'`
-
-### className
-
-**Type**: `string`\
-**Description**: Additional CSS classes to apply to the grid container. Use this prop to further customize the grid's appearance.\
-**Required**: No\
-**Default**: `''`
-
-### children
-
-**Type**: `ReactNode`\
-**Description**: The grid items to be displayed within the grid container.\
-**Required**: Yes
-
-
-## Customization
-
-You can customize the Grid component using CSS. The following class names are available for customization:
+You can customize the `Grid` component using CSS. The following class names are available for customization:
 
 `grid-container`: The main container for the grid.\
-`.col-*`: The class names for column widths, ranging from col-1 to col-12 for different screen sizes.
+`grid-1` to `grid-12`: The class names for column widths.
+
+### Breakpoints:
+
+`grid-m-*`: (min-width: 320px)\
+`grid-t-*`: (min-width: 480px)\
+`grid-d-*`: (min-width: 768px)
+
+### Class Selectors and Their Widths
+
+`grid-*-1`: 8.33%\
+`grid-*-2`: 16.66%\
+`grid-*-3`: 25%\
+`grid-*-4`: 33.33%\
+`grid-*-5`: 41.66%\
+`grid-*-6`: 50%\
+`grid-*-7`: 58.33%\
+`grid-*-8`: 66.66%\
+`grid-*-9`: 75%\
+`grid-*-10`: 83.33%\
+`grid-*-11`: 91.66%\
+`grid-*-12`: 100%

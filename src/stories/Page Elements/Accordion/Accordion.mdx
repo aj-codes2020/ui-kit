@@ -5,17 +5,16 @@ import * as AccordionStories from './Accordion.stories';
 
 # Accordion
 
-The Accordion component allows you to create expandable and collapsible sections, useful for presenting information in a compact and organized manner.
+The `Accordion` component allows you to create expandable and collapsible sections, useful for presenting information in a compact and organized manner.
 
 <Canvas of={AccordionStories.Default} />
 
-
 ## Usage
 
-To use the Accordion component, import it and pass an array of items with `title` and `content` properties.
+To use the `Accordion` component, import it and pass the necessary props:
 
 ```tsx
-import { Accordion } from 'path-to-your-components';
+import { Accordion } from '@aj-codes2020/ui-kit';
 
 const items = [
   { title: 'Section 1', content: 'Content for section 1' },
@@ -27,23 +26,42 @@ const items = [
 ```
 
 ## Props
-The Accordion component accepts the following props:
 
-### items
-**Type**: title: string; content: React.ReactNode; \
-**Description**: An array of items to be displayed in the accordion. Each item should have a title and content.\
-**Required**: Yes
+The `Accordion` component accepts the following props:
 
-### className
-**Type**: string\
-**Description**: Additional CSS classes to apply to the accordion container. Use this prop to further customize the accordion's appearance.\
-**Required**: No\
-**Default(()): ''
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`items`</td>
+        <td>title: string; content: React.ReactNode;</td>
+        <td>An array of items to be displayed in the accordion. Each item should have a title and content.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the accordion container. Use this prop to further customize the accordion's appearance.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
+## Class Selectors
 
-## Customization
-
-You can customize the Tabs component using CSS. The following class names are available for customization:
+You can customize the `Accordion` component using CSS. The following class names are available for customization:
 
 `accordion`: The main container for the accordion.\
 `accordion-item`: The container for each accordion item.\
@@ -52,4 +70,3 @@ You can customize the Tabs component using CSS. The following class names are av
 `accordion-icon`: The icon displayed at the end of the accordion title.\
 `accordion-content`: The content area of each accordion item.\
 `accordion-content.active`: The content area of the active accordion item.
-

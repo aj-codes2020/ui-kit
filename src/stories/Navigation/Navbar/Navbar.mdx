@@ -5,38 +5,124 @@ import * as NavbarStories from './Navbar.stories';
 
 # Navbar
 
-The Navbar component is used to display the main navigation header for your application. It includes elements for branding and customizable columns for additional content.
+The `Navbar` component is used to display the main navigation header for your application. It includes elements for branding and customizable columns for additional content.
 
 <Canvas of={NavbarStories.Default} />
 
 ## Usage
 
-To use the Navbar component, import it and provide the necessary props.
+To use the `Navbar` component, import it and provide the necessary props:
 
 ```tsx
-import Navbar from 'path-to-your-components/Navbar';
+import { Navbar } from '@aj-codes2020/ui-kit';
 
 <Navbar
   logoSrc="https://via.placeholder.com/40"
   logoAlt="Logo"
-  logoTitle="My Application"
+  logoTitle="Title"
   centerColumn={
     <>
-      <a href="/center1">Center Link 1</a>
-      <a href="/center2">Center Link 2</a>
+      <a href="/center1">CenterLink1</a>
+      <a href="/center2">CenterLink2</a>
     </>
   }
-  rightColumn={
+  rightColumn={ 
     <>
-      <a href="/right1">Right Link 1</a>
-      <a href="/right2">Right Link 2</a>
+      <a href="/right1">RightLink1</a>
+      <a href="/right2">RightLink2</a>
     </>
   }
   menuColumn={
     <>
-      <a href="/menu1">Menu Link 1</a>
-      <a href="/menu2">Menu Link 2</a>
+      <a href="/menu1">MenuLink1</a>
+      <a href="/menu2">MenuLink2</a>
     </>
   }
-/>;
+/>
 ```
+
+## Props
+The `Navbar` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`logoSrc`</td>
+        <td>string</td>
+        <td>URL for the logo image.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`logoAlt`</td>
+        <td>string</td>
+        <td>Alt text for the logo image.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`logoTitle`</td>
+        <td>string</td>
+        <td>Title displayed next to the logo.</td>
+        <td>No</td>
+        <td>'Title'</td>
+      </tr>
+      <tr>
+        <td>`centerColumn`</td>
+        <td>ReactNode</td>
+        <td>Elements to be displayed in the center column of the navbar.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`rightColumn`</td>
+        <td>ReactNode</td>
+        <td>Elements to be displayed in the right column of the navbar.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`menuColumn`</td>
+        <td>ReactNode</td>
+        <td>Elements to be displayed in the dropdown menu.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the navbar.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+You can customize the `Navbar` component using CSS. The following class names are available for customization:
+
+`navbar`: The main container for the navbar.\
+`navbar .logo`: The logo container in the navbar.\
+`navbar .logo img`: The logo image.\
+`navbar .logo h1`: The logo title.\
+`navbar .column-center`: The center column of the navbar.\
+`navbar .column-right`: The right column of the navbar.\
+`navbar a`: The links in the navbar.\
+`navbar .hamburger-menu`: The hamburger menu button (visible on mobile).\
+`menu`: The container for the dropdown menu.\
+`menu-header`: The header of the dropdown menu.\
+`menu-header .logo`: The logo container in the dropdown menu header.\
+`menu-header .logo img`: The logo image in the dropdown menu header.\
+`menu-header .logo h1`: The logo title in the dropdown menu header.\
+`menu-column`: The container for the menu column items.

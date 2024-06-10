@@ -5,16 +5,16 @@ import * as RatingStories from './Rating.stories';
 
 # Rating
 
-The Rating component allows users to rate items such as products or services. Users can select a number of stars to represent their rating.
+The `Rating` component allows users to rate items such as products or services. Users can select a number of stars to represent their rating.
 
 <Canvas of={RatingStories.Default} />
 
 ## Usage
 
-To use the Rating component, import it and provide the necessary props such as `maxRating`, `value`, and `onChange`.
+To use the `Rating` component, import it and provide the necessary props:
 
 ```tsx
-import { Rating } from 'path-to-your-components';
+import { Rating } from '@aj-codes2020/ui-kit';
 
 const App = () => {
   const [rating, setRating] = useState(3);
@@ -23,9 +23,64 @@ const App = () => {
 };
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `Rating` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>maxRating</code></td>
+        <td>number</td>
+        <td>The maximum number of stars for the rating.</td>
+        <td>No</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td><code>value</code></td>
+        <td>number</td>
+        <td>The current rating value.</td>
+        <td>No</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td><code>onChange</code></td>
+        <td>(rating: number) => void</td>
+        <td>Callback function when the rating value changes.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td><code>className</code></td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the rating container.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td><code>readOnly</code></td>
+        <td>boolean</td>
+        <td>If true, the rating component is read-only.</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Rating` component using CSS. The following class names are available for customization:
 
 `rating`: The main container for the rating component.\
 `star`: The individual star element.\

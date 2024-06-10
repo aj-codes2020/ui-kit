@@ -5,16 +5,16 @@ import * as TextAreaStories from './TextArea.stories';
 
 # Text Area
 
-The Text Area component is used for multiline text input, allowing users to enter large amounts of text.
+The `TextArea` component is used for multiline text input, allowing users to enter large amounts of text.
 
 <Canvas of={TextAreaStories.Default} />
 
 ## Usage
 
-To use the Text Area component, import it and provide the necessary props such as `value`, `onChange`, `placeholder`, `rows`, and `cols`.
+To use the `TextArea` component, import it and pass the necessary props:
 
 ```tsx
-import { TextArea } from 'path-to-your-components';
+import { TextArea } from '@aj-codes2020/ui-kit';
 
 const App = () => {
   const [value, setValue] = useState('');
@@ -31,9 +31,72 @@ const App = () => {
 };
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `TextArea` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`value`</td>
+        <td>string</td>
+        <td>The value of the textarea.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`onChange`</td>
+        <td>(value: string) => void</td>
+        <td>Callback function to handle value changes.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`placeholder`</td>
+        <td>string</td>
+        <td>Placeholder text for the textarea.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td>`rows`</td>
+        <td>number</td>
+        <td>Number of rows to display.</td>
+        <td>No</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>`cols`</td>
+        <td>number</td>
+        <td>Number of columns to display.</td>
+        <td>No</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the textarea element.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+## Class Selectors
+
+You can customize the `TextArea` component using CSS. The following class names are available for customization:
 
 `textarea`: The main container for the textarea element.\
 `textarea:focus`: The focused state of the textarea element.

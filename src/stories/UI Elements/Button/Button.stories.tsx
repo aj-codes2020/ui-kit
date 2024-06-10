@@ -8,9 +8,6 @@ const meta: Meta<typeof Button> = {
   parameters: { 
     layout: 'centered',
   },
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
   args: { onClick: fn() },
 };
 
@@ -26,20 +23,6 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
     label: 'Button',
   },
 };

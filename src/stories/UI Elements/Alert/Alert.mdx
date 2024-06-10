@@ -1,0 +1,77 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as AlertStories from './Alert.stories';
+
+<Meta of={AlertStories} />
+
+# Alert
+
+The `Alert` component is used to display important messages to the user, such as informational, success, warning, and error alerts.
+
+<Canvas of={AlertStories.Informational} />
+<Canvas of={AlertStories.Success} />
+<Canvas of={AlertStories.Warning} />
+<Canvas of={AlertStories.Error} />
+
+## Usage
+
+To use the `Alert` component, import it and pass the necessary props:
+
+```tsx
+import { Alert } from '@aj-codes2020/ui-kit';
+
+<Alert type="info" message="This is an informational alert" />;
+<Alert type="success" message="This is a success alert" />;
+<Alert type="warning" message="This is a warning alert" />;
+<Alert type="error" message="This is an error alert" />;
+```
+
+## Props
+
+The `Alert` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`type`</td>
+        <td>'info' | 'success' | 'warning' | 'error'</td>
+        <td>Specifies the type of alert to display. Each type corresponds to a different style and purpose.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`message`</td>
+        <td>string</td>
+        <td>The message to display within the alert.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the alert container. Use this prop to further customize the alert's appearance.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Alert` component using CSS. The following class names are available for customization:
+
+`alert`: The main container for the alert.\
+`alert-info`: The container for an informational alert.\
+`alert-success`: The container for a success alert.\
+`alert-warning`: The container for a warning alert.\
+`alert-error`: The container for an error alert.

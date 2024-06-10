@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import {Alert} from '../../components'; // Ensure the correct path to your Alert component
+import {Alert} from '../../../components'; // Ensure the correct path to your Alert component
 
 interface AlertPropsAndCustomArgs extends React.ComponentProps<typeof Alert> {}
 
 const meta: Meta<AlertPropsAndCustomArgs> = {
-  title: 'Components/Feedback/Alert',
+  title: 'Components/UI Elements/Alert',
   component: Alert,
   render: (args) => <Alert {...args} />, 
   parameters: {

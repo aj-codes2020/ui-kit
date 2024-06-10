@@ -5,7 +5,7 @@ import * as BadgeStories from './Badge.stories';
 
 # Badge
 
-The Badge component is used to display status indicators or counters, useful for showing notifications or status information.
+The `Badge` component is used to display status indicators or counters, useful for showing notifications or status information.
 
 <Canvas of={BadgeStories.Default} />
 <Canvas of={BadgeStories.PrimaryCounter} />
@@ -15,27 +15,75 @@ The Badge component is used to display status indicators or counters, useful for
 
 ## Usage
 
-To use the Badge component, import it and pass the `children`, `type`, `color`, `size`, and `className` properties.
+To use the `Badge` component, import it and pass the necessary props:
 
 ```tsx
-import { Badge } from 'path-to-your-components';
+import { Badge } from '@aj-codes2020/ui-kit';
 
 <Badge 
-  type="status" 
   color="default" 
   size="medium" 
   className=""
 >
   Default
-</Badge>;
+</Badge>
 ```
 
-## Customization
+## Props
 
-You can customize the Badge component using CSS. The following class names are available for customization:
+The `Badge` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`children`</td>
+        <td>React.ReactNode</td>
+        <td>The content to be displayed inside the badge.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`color`</td>
+        <td>'default' | 'primary' | 'success' | 'warning' | 'danger'</td>
+        <td>Color theme of the badge.</td>
+        <td>No</td>
+        <td>'default'</td>
+      </tr>
+      <tr>
+        <td>`size`</td>
+        <td>'small' | 'medium' | 'large'</td>
+        <td>Size of the badge.</td>
+        <td>No</td>
+        <td>'medium'</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the badge.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Badge` component using CSS. The following class names are available for customization:
 
 `badge`: The main container for the badge.\
 `badge.status`: The status type badge.\
+`badge.counter`: The counter type badge.\
 `badge.default`: The default color badge.\
 `badge.primary`: The primary color badge.\
 `badge.success`: The success color badge.\

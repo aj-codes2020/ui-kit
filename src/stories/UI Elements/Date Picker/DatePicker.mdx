@@ -5,7 +5,7 @@ import * as DatePickerStories from './DatePicker.stories';
 
 # DatePicker
 
-The DatePicker component allows users to select a date, with optional time selection and customizable date format.
+The `DatePicker` component allows users to select a date, with optional time selection and customizable date format.
 
 <Canvas of={DatePickerStories.Default} />
 
@@ -13,10 +13,10 @@ The DatePicker component allows users to select a date, with optional time selec
 
 ## Usage
 
-To use the DatePicker component, import it and pass the necessary props, such as `selected`, `onChange`, `showTimeSelect`, `dateFormat`, and `className`.
+To use the `DatePicker` component, import it and pass the necessary props:
 
 ```tsx
-import { DatePicker } from 'path-to-your-components';
+import { DatePicker } from '@aj-codes2020/ui-kit';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
@@ -33,9 +33,64 @@ const App = () => {
 };
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `DatePicker` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`selected`</td>
+        <td>Date | null</td>
+        <td>The currently selected date.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`onChange`</td>
+        <td>(date: Date | null) => void</td>
+        <td>Callback function to handle date changes.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`showTimeSelect`</td>
+        <td>boolean</td>
+        <td>Option to show time selection.</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>`dateFormat`</td>
+        <td>string</td>
+        <td>The format of the date to display.</td>
+        <td>No</td>
+        <td>'MM/dd/yyyy'</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the date picker container.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `DatePicker` component using CSS. The following class names are available for customization:
 
 `date-picker-container`: The main container for the date picker.\
 `date-picker-input`: The input field for the date picker.

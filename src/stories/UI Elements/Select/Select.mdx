@@ -5,16 +5,16 @@ import * as SelectStories from './Select.stories';
 
 # Select
 
-The Select component allows users to choose from a list of options, with support for single or multiple selections.
+The `Select` component allows users to choose from a list of options, with support for single or multiple selections.
 
 <Canvas of={SelectStories.SingleSelect} />
 
 ## Usage
 
-To use the Select component, import it and provide the necessary props such as `options`, `isMulti`, and `placeholder`.
+To use the `Select` component, import it and pass the necessary props:
 
 ```tsx
-import { Select } from 'path-to-your-components';
+import { Select } from '@aj-codes2020/ui-kit';
 
 const options = [
   { value: 'apple', label: 'Apple' },
@@ -40,9 +40,64 @@ const App = () => {
 };
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `Select` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`options`</td>
+        <td>Option[]</td>
+        <td>An array of options to select from.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`isMulti`</td>
+        <td>boolean</td>
+        <td>If `true`, allows multiple selections.</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>`placeholder`</td>
+        <td>string</td>
+        <td>Placeholder text to display when no option is selected.</td>
+        <td>No</td>
+        <td>'Select...'</td>
+      </tr>
+      <tr>
+        <td>`onChange`</td>
+        <td>(selected: string | string[]) => void</td>
+        <td>Callback function to handle the selection change.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the select component.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Select` component using CSS. The following class names are available for customization:
 
 `select-container`: The main container for the select component.\
 `select-control`: The control area of the select component, showing the selected value(s) and the dropdown arrow.\

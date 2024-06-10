@@ -5,17 +5,17 @@ import * as AvatarStories from './Avatar.stories';
 
 # Avatar
 
-The Avatar component is used to display user profile images in different shapes and sizes.
+The `Avatar` component is used to display user profile images in different shapes and sizes.
 
 <Canvas of={AvatarStories.Default} />
 <Canvas of={AvatarStories.Square} />
 
 ## Usage
 
-To use the Avatar component, import it and pass the `src`, `alt`, `size`, `shape`, and `className` properties.
+To use the `Avatar` component, import it and pass the necessary props:
 
 ```tsx
-import { Avatar } from 'path-to-your-components';
+import { Avatar } from '@aj-codes2020/ui-kit';
 
 <Avatar 
   src="https://via.placeholder.com/150" 
@@ -23,12 +23,67 @@ import { Avatar } from 'path-to-your-components';
   size="medium" 
   shape="circle" 
   className=""
-/>;
+/>
 ```
 
-## Customization
+## Props
 
-You can customize the Avatar component using CSS. The following class names are available for customization:
+The `Avatar` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`src`</td>
+        <td>string</td>
+        <td>URL of the image to be displayed.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`alt`</td>
+        <td>string</td>
+        <td>Alt text for the image.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`size`</td>
+        <td>'small' | 'medium' | 'large'</td>
+        <td>Size of the avatar.</td>
+        <td>No</td>
+        <td>'medium'</td>
+      </tr>
+      <tr>
+        <td>`shape`</td>
+        <td>'circle' | 'square'</td>
+        <td>Shape of the avatar.</td>
+        <td>No</td>
+        <td>'circle'</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the avatar.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Avatar` component using CSS. The following class names are available for customization:
 
 `avatar`: The main container for the avatar.\
 `avatar.small`: The small size avatar.\

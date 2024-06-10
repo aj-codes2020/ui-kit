@@ -5,38 +5,85 @@ import * as ButtonStories from './Button.stories';
 
 # Button
 
-The Button component is a versatile element used to trigger actions in your application. It supports various sizes, colors, and styles.
+The `Button` component is a versatile element used to trigger actions in your application. It supports various sizes, colors, and styles.
 
 <Canvas of={ButtonStories.Primary} />
 <Canvas of={ButtonStories.Secondary} />
 
-
 ## Usage
 
-To use the Button component, import it and pass the appropriate props such as `primary`, `size`, `backgroundColor`, `label`, and `onClick`.
+To use the `Button` component, import it and pass the necessary props:
 
 ```tsx
-import { Button } from 'path-to-your-components';
+import { Button } from '@aj-codes2020/ui-kit';
 
 <Button 
   primary 
   label="Primary Button" 
   onClick={() => alert('Button clicked')} 
-/>;
+/>
 
 <Button 
   label="Secondary Button" 
   onClick={() => alert('Button clicked')} 
-/>;
+/>
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `Button` component accepts the following props:
 
-`storybook-button`: The main container for the button.\
-`storybook-button--primary`: The primary style button.\
-`storybook-button--secondary`: The secondary style button.\
-`storybook-button--small`: The small size button.\
-`storybook-button--medium`: The medium size button.\
-`storybook-button--large`: The large size button.
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`primary`</td>
+        <td>boolean</td>
+        <td>Whether the button is styled as the primary button.</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>`size`</td>
+        <td>'small' | 'medium' | 'large'</td>
+        <td>The size of the button.</td>
+        <td>No</td>
+        <td>'medium'</td>
+      </tr>
+      <tr>
+        <td>`label`</td>
+        <td>string</td>
+        <td>The text to be displayed on the button.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`onClick`</td>
+        <td>() => void</td>
+        <td>The function to call when the button is clicked.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Button` component using CSS. The following class names are available for customization:
+
+`button`: The main container for the button.\
+`button--primary`: The primary style button.\
+`button--secondary`: The secondary style button.\
+`button--small`: The small size button.\
+`button--medium`: The medium size button.\
+`button--large`: The large size button.

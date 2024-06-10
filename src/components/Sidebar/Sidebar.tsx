@@ -18,7 +18,7 @@ const Sidebar = ({
   sidebarLinks,
   headerContent,
   className = '',
-  children
+  children,
 }: SidebarProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
 
@@ -53,7 +53,7 @@ const Sidebar = ({
     <div className={`sidebar-layout ${className}`}>
       <aside className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-title">
-          <div className='sidebar-logo'>
+          <div className="sidebar-logo">
             {logoSrc && <img src={logoSrc} alt={logoAlt} />}
             {sidebarTitle}
           </div>
@@ -62,22 +62,18 @@ const Sidebar = ({
           </button>
         </div>
         <nav className="sidebar-nav">
-          <ul onClick={handleLinkClick}>
-            {sidebarLinks}
-          </ul>
+          <ul onClick={handleLinkClick}>{sidebarLinks}</ul>
         </nav>
       </aside>
 
-      <div className="main-content">
-        <header className="header">
-          <button className="hamburger-menu" onClick={toggleSidebar}>☰</button>
-          <div className="header-content">
-            {headerContent}
-          </div>
+      <div className={`main-content ${isSidebarOpen ? '' : 'full-width'}`}>
+        <header className={`header ${isSidebarOpen ? '' : 'full-width'}`}>
+          <button className="hamburger-menu" onClick={toggleSidebar}>
+            ☰
+          </button>
+          <div className="header-content">{headerContent}</div>
         </header>
-        <main className="body-container">
-          {children}
-        </main>
+        <main className="body-container">{children}</main>
       </div>
     </div>
   );

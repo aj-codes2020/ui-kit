@@ -5,19 +5,18 @@ import * as CardStories from './Card.stories';
 
 # Card
 
-The Card component is a versatile container that can include a header, body, and footer. It is useful for displaying content in a structured and visually appealing manner.
+The `Card` component is a versatile container that can include a header, body, and footer. It is useful for displaying content in a structured and visually appealing manner.
 
 <Canvas of={CardStories.Default} />
 <Canvas of={CardStories.WithoutHeader} />
 <Canvas of={CardStories.WithoutFooter} />
 
-
 ## Usage
 
-To use the Card component, import it and pass the necessary props for `header`, `children`, and `footer`.
+To use the `Card` component, import it and pass the necessary props:
 
 ```tsx
-import { Card } from 'path-to-your-components';
+import { Card } from '@aj-codes2020/ui-kit';
 
 <Card
   header="Card Header"
@@ -25,33 +24,60 @@ import { Card } from 'path-to-your-components';
   className=""
 >
   This is the body of the card.
-</Card>;
+</Card>
 ```
 
 ## Props
 
-The Card component accepts the following props:
+The `Card` component accepts the following props:
 
-### header
-**Type**: React.ReactNode\
-**Description**: The content to display in the header of the card.\
-**Required**: No
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`header`</td>
+        <td>React.ReactNode</td>
+        <td>The content to display in the header of the card.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`footer`</td>
+        <td>React.ReactNode</td>
+        <td>The content to display in the footer of the card.</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`children`</td>
+        <td>React.ReactNode</td>
+        <td>The content to display in the body of the card.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the card container.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-## footer
-**Type**: React.ReactNode\
-**Description**: The content to display in the footer of the card.\
-**Required**: No
+## Class Selectors
 
-## children
-**Type**: React.ReactNode\
-**Description**: The content to display in the body of the card.
-**Required** : Yes
-
-
-
-## Customization
-
-You can customize the Tabs component using CSS. The following class names are available for customization:
+You can customize the `Card` component using CSS. The following class names are available for customization:
 
 `card`: The main container for the card.\
 `card-header`: The container for the card's header.\

@@ -5,16 +5,16 @@ import * as SpinnerStories from './Spinner.stories';
 
 # Spinner
 
-The Spinner component is used to indicate loading or processing states in your application.
+The `Spinner` component is used to indicate loading or processing states in your application.
 
 <Canvas of={SpinnerStories.Default} />
 
 ## Usage
 
-To use the Spinner component, import it and provide the necessary props such as `size` and `color`.
+To use the `Spinner` component, import it and pass the necessary props:
 
 ```tsx
-import { Spinner } from 'path-to-your-components';
+import { Spinner } from '@aj-codes2020/ui-kit';
 
 const App = () => {
   return (
@@ -23,9 +23,52 @@ const App = () => {
 };
 ```
 
-## Customization
 
-You can customize the Button component using CSS. The following class names are available for customization:
+
+## Props
+
+The `Spinner` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`size`</td>
+        <td>'small' | 'medium' | 'large'</td>
+        <td>The size of the spinner.</td>
+        <td>No</td>
+        <td>'medium'</td>
+      </tr>
+      <tr>
+        <td>`color`</td>
+        <td>'primary' | 'secondary' | 'success' | 'warning' | 'danger'</td>
+        <td>The color of the spinner.</td>
+        <td>No</td>
+        <td>'primary'</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the spinner component.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Spinner` component using CSS. The following class names are available for customization:
 
 `spinner`: The main container for the spinner component.\
 `spinner-circle`: The animated circle of the spinner.\

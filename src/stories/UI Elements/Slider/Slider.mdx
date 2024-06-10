@@ -11,10 +11,10 @@ The Slider component allows users to select a value from a range by sliding a ha
 
 ## Usage
 
-To use the Slider component, import it and provide the necessary props such as `min`, `max`, `step`, and `value`.
+To use the `Slider` component, import it and pass the necessary props:
 
 ```tsx
-import { Slider } from 'path-to-your-components';
+import { Slider } from '@aj-codes2020/ui-kit';
 
 const App = () => {
   const [value, setValue] = useState(50);
@@ -31,10 +31,73 @@ const App = () => {
 };
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `Slider` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`min`</td>
+        <td>number</td>
+        <td>The minimum value of the slider.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`max`</td>
+        <td>number</td>
+        <td>The maximum value of the slider.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`step`</td>
+        <td>number</td>
+        <td>The step value for the slider.</td>
+        <td>No</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>`value`</td>
+        <td>number</td>
+        <td>The current value of the slider.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`onChange`</td>
+        <td>(value: number) => void</td>
+        <td>Callback function to handle the value change.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the slider component.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Slider` component using CSS. The following class names are available for customization:
 
 `slider-container`: The main container for the slider component.\
 `slider`: The input element of the slider.\
 `slider-value`: The display value of the slider.
+```

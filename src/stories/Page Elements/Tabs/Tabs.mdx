@@ -5,16 +5,16 @@ import * as TabsStories from './Tabs.stories';
 
 # Tabs
 
-The Tabs component allows you to create tabbed navigation for organizing content into separate views. Each tab can be clicked to display its associated content.
+The `Tabs` component allows you to create tabbed navigation for organizing content into separate views. Each tab can be clicked to display its associated content.
 
 <Canvas of={TabsStories.Default} />
 
 ## Usage
 
-To use the Tabs component, import it and pass an array of tabs with `label` and `content` properties.
+To use the `Tabs` component, import it and pass the necessary props:
 
 ```tsx
-import { Tabs } from 'path-to-your-components';
+import { Tabs } from '@aj-codes2020/ui-kit';
 
 const tabs = [
   { label: 'Tab 1', content: 'Content for tab 1' },
@@ -22,12 +22,46 @@ const tabs = [
   { label: 'Tab 3', content: 'Content for tab 3' },
 ];
 
-<Tabs tabs={tabs} />;
+<Tabs tabs={tabs} />
 ```
 
-## Customization
+## Props
 
-You can customize the Tabs component using CSS. The following class names are available for customization:
+The `Tabs` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`tabs`</td>
+        <td>abel: string, content: React.ReactNode</td>
+        <td>An array of tab objects with `label` and `content` properties.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the tabs container.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Tabs` component using CSS. The following class names are available for customization:
 
 `tabs-container`: The main container for the tabs.\
 `tabs-header`: The container for the tab headers.\

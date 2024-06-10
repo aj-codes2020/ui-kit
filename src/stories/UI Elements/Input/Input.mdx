@@ -5,16 +5,16 @@ import * as InputStories from './Input.stories';
 
 # Input
 
-The Input component allows you to create various types of input fields, including text, email, password, and number fields.
+The `Input` component allows you to create various types of input fields, including text, email, password, and number fields.
 
 <Canvas of={InputStories.TextInput} />
 
 ## Usage
 
-To use the Input component, import it and use it in your form or other input-related UI.
+To use the `Input` component, import it and pass the necessary props:
 
 ```tsx
-import { Input } from 'path-to-your-components';
+import { Input } from '@aj-codes2020/ui-kit';
 
 const handleChange = (value: string) => {
   console.log(value);
@@ -23,9 +23,85 @@ const handleChange = (value: string) => {
 <Input type="text" value="" onChange={handleChange} placeholder="Enter text..." />;
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `Input` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`type`</td>
+        <td>'text' | 'email' | 'password' | 'number'</td>
+        <td>The type of input field.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`value`</td>
+        <td>string</td>
+        <td>The value of the input field.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`onChange`</td>
+        <td>(value: string) => void</td>
+        <td>Callback function to handle changes in the input field.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`placeholder`</td>
+        <td>string</td>
+        <td>Placeholder text for the input field.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the input element.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+      <tr>
+        <td>`min`</td>
+        <td>number</td>
+        <td>The minimum value for the input field (only applicable to `number` type).</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`max`</td>
+        <td>number</td>
+        <td>The maximum value for the input field (only applicable to `number` type).</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`step`</td>
+        <td>number</td>
+        <td>The step value for the input field (only applicable to `number` type).</td>
+        <td>No</td>
+        <td>N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Input` component using CSS. The following class names are available for customization:
 
 `input`: The main input element.\
-`input`:focus: The focus state of the input element.
+`input:focus`: The focus state of the input element.

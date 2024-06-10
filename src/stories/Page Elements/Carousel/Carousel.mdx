@@ -5,18 +5,17 @@ import * as CarouselStories from './Carousel.stories';
 
 # Carousel
 
-The Carousel component allows you to create a slideshow of items that can autoplay and includes navigation options, providing a versatile way to display multiple pieces of content in a compact space.
+The `Carousel` component allows you to create a slideshow of items that can autoplay and includes navigation options, providing a versatile way to display multiple pieces of content in a compact space.
 
 <Canvas of={CarouselStories.TextCarousel} />
-
 <Canvas of={CarouselStories.ImageCarousel} />
 
 ## Usage
 
-To use the Carousel component, import it and pass an array of items. You can also control various options such as autoplay, navigation type, and interval.
+To use the `Carousel` component, import it and pass the necessary props:
 
 ```tsx
-import { Carousel } from 'path-to-your-components';
+import { Carousel } from '@aj-codes2020/ui-kit';
 
 const textItems = [
   <div style={{ padding: '2rem', backgroundColor: '#f0f0f0', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Text Item 1</div>,
@@ -32,12 +31,81 @@ const textItems = [
   navigationType="dots"
   navigationPosition="bottom"
   className=""
-/>;
+/>
 ```
 
-## Customization
+## Props
 
-You can customize the Tabs component using CSS. The following class names are available for customization:
+The `Carousel` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`items`</td>
+        <td>ReactNode[]</td>
+        <td>The array of items to display in the carousel.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`autoplay`</td>
+        <td>boolean</td>
+        <td>Whether the carousel should autoplay.</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>`autoplayInterval`</td>
+        <td>number</td>
+        <td>The interval in milliseconds for autoplay.</td>
+        <td>No</td>
+        <td>3000</td>
+      </tr>
+      <tr>
+        <td>`showNavigation`</td>
+        <td>boolean</td>
+        <td>Whether to show navigation controls.</td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>`navigationType`</td>
+        <td>'dots' | 'pictures'</td>
+        <td>The type of navigation controls.</td>
+        <td>No</td>
+        <td>'dots'</td>
+      </tr>
+      <tr>
+        <td>`navigationPosition`</td>
+        <td>'bottom' | 'below'</td>
+        <td>The position of the navigation controls.</td>
+        <td>No</td>
+        <td>'below'</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the carousel container.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Carousel` component using CSS. The following class names are available for customization:
 
 `carousel`: The main container for the carousel.\
 `carousel-content`: The container that holds all the carousel items.\
@@ -51,4 +119,3 @@ You can customize the Tabs component using CSS. The following class names are av
 `carousel-pictures`: The container for the picture navigation controls.\
 `picture-thumbnail`: The individual picture navigation control.\
 `picture-thumbnail.active`: The active picture navigation control.
-

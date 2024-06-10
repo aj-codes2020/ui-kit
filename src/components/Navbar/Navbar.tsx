@@ -14,7 +14,7 @@ interface NavbarProps {
 const Navbar = ({
   logoSrc,
   logoAlt,
-  logoTitle = 'AJ.Codes',
+  logoTitle = 'Title',
   centerColumn,
   rightColumn,
   menuColumn,

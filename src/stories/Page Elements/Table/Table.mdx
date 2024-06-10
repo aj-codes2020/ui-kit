@@ -5,31 +5,98 @@ import * as TableStories from './Table.stories';
 
 # Table
 
-The Table component allows you to display and manipulate tabular data with features such as sorting, filtering, and pagination.
+The `Table` component allows you to display and manipulate tabular data with features such as sorting, filtering, and pagination.
 
 <Canvas of={TableStories.Default} />
 
 ## Usage
 
-To use the Table component, import it and pass an array of columns and data objects.
+To use the `Table` component, import it and pass the necessary props:
 
 ```tsx
-import { Table } from 'path-to-your-components';
+import { Table } from '@aj-codes2020/ui-kit';
 
 const columns = ['Name', 'Age', 'Country'];
 const data = [
   { Name: 'John Doe', Age: '28', Country: 'USA' },
   { Name: 'Anna Smith', Age: '22', Country: 'UK' },
   { Name: 'Paul Brown', Age: '35', Country: 'Canada' },
-  // Add more sample data as needed
 ];
 
-<Table columns={columns} data={data} />;
+<Table
+  columns={columns}
+  data={data}
+  itemsPerPage={10}
+  showFilter={true}
+  showNavigation={true}
+/>;
 ```
 
-## Customization
+## Props
 
-You can customize the Button component using CSS. The following class names are available for customization:
+The `Table` component accepts the following props:
+
+<div style={{ overflowX: 'auto' }}>
+  <table style={{ width: '100%' }}>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`columns`</td>
+        <td>string[]</td>
+        <td>An array of column names for the table.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`data`</td>
+        <td>[key: string]: string </td>
+        <td>An array of data objects to populate the table.</td>
+        <td>Yes</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>`itemsPerPage`</td>
+        <td>number</td>
+        <td>The number of items to display per page.</td>
+        <td>No</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>`showFilter`</td>
+        <td>boolean</td>
+        <td>Whether to show the filter input field.</td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>`showNavigation`</td>
+        <td>boolean</td>
+        <td>Whether to show the pagination controls.</td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>`className`</td>
+        <td>string</td>
+        <td>Additional CSS classes to apply to the table container.</td>
+        <td>No</td>
+        <td>''</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Class Selectors
+
+You can customize the `Table` component using CSS. The following class names are available for customization:
 
 `table-container`: The main container for the table.\
 `table-filter`: The filter input field.\

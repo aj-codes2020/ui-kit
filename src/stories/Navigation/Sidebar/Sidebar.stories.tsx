@@ -17,7 +17,7 @@ const meta: Meta<typeof Sidebar> = {
   },
 };
 
-export default meta;
+export default meta; 
 
 type Story = StoryObj<typeof Sidebar>;
 
@@ -30,14 +30,14 @@ export const Default: Story = {
   args: {
     logoSrc: 'https://via.placeholder.com/40',
     logoAlt: 'Logo',
-    sidebarTitle: 'Sidebar Title',
+    sidebarTitle: 'Title',
     sidebarLinks: (
       <>
-        <li><a href="/">Home</a></li>
-        <li><a href="/link1">Link 1</a></li>
-        <li><a href="/link2">Link 2</a></li>
-        <li><a href="/link3">Link 3</a></li>
-        <li><a href="/link4">Link 4</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Link1</a></li>
+        <li><a href="#">Link2</a></li>
+        <li><a href="#">Link3</a></li>
+        <li><a href="#">Link4</a></li>
       </>
     ),
     headerContent: <div>Header Content</div>,
@@ -51,27 +51,3 @@ export const Default: Story = {
   },
 };
 
-export const LoggedOut: Story = {
-  ...Template,
-  args: {
-    logoSrc: 'https://via.placeholder.com/40',
-    logoAlt: 'Logo',
-    sidebarTitle: 'Sidebar Title',
-    sidebarLinks: (
-      <>
-        <li><a href="/link1">Link 1</a></li>
-        <li><a href="/link2">Link 2</a></li>
-        <li><a href="/link3">Link 3</a></li>
-        <li><a href="/link4">Link 4</a></li>
-      </>
-    ),
-    headerContent: <div>Please log in.</div>,
-    className: '',
-    children: (
-      <div>
-        <h1>Main Content</h1>
-        <p>This is the main content area.</p>
-      </div>
-    ),
-  },
-};

@@ -13,7 +13,6 @@ const meta: Meta<BadgePropsAndCustomArgs> = {
   },
   argTypes: {
     children: { control: 'text' },
-    type: { control: 'select', options: ['status', 'counter'] },
     color: { control: 'select', options: ['default', 'primary', 'success', 'warning', 'danger'] },
     size: { control: 'select', options: ['small', 'medium', 'large'] },
     className: { control: 'text' },
@@ -27,9 +26,8 @@ type Story = StoryObj<BadgePropsAndCustomArgs>;
 export const Default: Story = {
   args: {
     children: 'Default',
-    type: 'status',
     color: 'default',
-    size: 'medium',
+    size: 'large',
     className: '',
   },
 };
@@ -37,9 +35,8 @@ export const Default: Story = {
 export const PrimaryCounter: Story = {
   args: {
     children: 'primary',
-    type: 'counter',
     color: 'primary',
-    size: 'medium',
+    size: 'large',
     className: '',
   },
 };
@@ -47,9 +44,8 @@ export const PrimaryCounter: Story = {
 export const SuccessStatus: Story = {
   args: {
     children: 'Success',
-    type: 'status',
     color: 'success',
-    size: 'medium',
+    size: 'large',
     className: '',
   },
 };
@@ -57,7 +53,6 @@ export const SuccessStatus: Story = {
 export const WarningCounter: Story = {
   args: {
     children: 'Warning',
-    type: 'counter',
     color: 'warning',
     size: 'large',
     className: '',
@@ -67,9 +62,8 @@ export const WarningCounter: Story = {
 export const DangerStatus: Story = {
   args: {
     children: 'Danger',
-    type: 'status',
     color: 'danger',
-    size: 'small',
+    size: 'large',
     className: '',
   },
 };
