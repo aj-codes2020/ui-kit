@@ -11,23 +11,19 @@ The `Modal` component provides a way to create modal dialogs for user interactio
 
 ## Usage
 
-To use the `Modal` component, import it and pass the necessary props:
+To use the `Modal` component, import it and use it directly in your component:
 
 ```tsx
-import { useState } from 'react';
 import { Modal } from '@aj-codes2020/ui-kit';
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <>
-      <button onClick={() => setIsOpen(true)}>Open Modal</button>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Modal Title">
-        <p>This is the content of the modal.</p>
-        <button onClick={() => setIsOpen(false)}>Close</button>
-      </Modal>
-    </>
+    <Modal
+      title="Modal Title"
+      trigger={<button>Open Modal</button>}
+    >
+      <p>This is the content of the modal.</p>
+    </Modal>
   );
 };
 ```
@@ -49,20 +45,6 @@ The `Modal` component accepts the following props:
     </thead>
     <tbody>
       <tr>
-        <td>`isOpen`</td>
-        <td>boolean</td>
-        <td>Determines whether the modal is open.</td>
-        <td>Yes</td>
-        <td>N/A</td>
-      </tr>
-      <tr>
-        <td>`onClose`</td>
-        <td>() => void</td>
-        <td>Callback function to close the modal.</td>
-        <td>Yes</td>
-        <td>N/A</td>
-      </tr>
-      <tr>
         <td>`title`</td>
         <td>string</td>
         <td>The title of the modal.</td>
@@ -77,10 +59,10 @@ The `Modal` component accepts the following props:
         <td>N/A</td>
       </tr>
       <tr>
-        <td>`footer`</td>
+        <td>`trigger`</td>
         <td>ReactNode</td>
-        <td>The content to display in the modal footer.</td>
-        <td>No</td>
+        <td>The element that triggers the modal when clicked.</td>
+        <td>Yes</td>
         <td>N/A</td>
       </tr>
       <tr>
@@ -99,8 +81,8 @@ The `Modal` component accepts the following props:
 You can customize the `Modal` component using CSS. The following class names are available for customization:
 
 `modal-overlay`: The overlay behind the modal.\
+`modal-overlay.open`: The class to apply when the modal is open.\
 `modal`: The main container for the modal content.\
 `modal-header`: The header of the modal, containing the title.\
 `modal-body`: The body of the modal, containing the main content.\
-`modal-footer`: The footer of the modal, typically used for action buttons.\
 `modal-close`: The button to close the modal.

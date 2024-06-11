@@ -1,31 +1,32 @@
-import { ReactNode } from 'react';
+import React, { useState } from 'react';
 import './Modal.css';
 
 interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
   title?: string;
-  children: ReactNode;
-  footer?: ReactNode;
+  children: React.ReactNode;
+  trigger: React.ReactNode;
   className?: string;
 }
 
-const Modal = ({ isOpen, onClose, title, children, footer, className = '' }: ModalProps) => {
-  if (!isOpen) {
-    return null;
-  }
+const Modal = ({ title, children, trigger, className = '' }: ModalProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
 
   return (
-    <div className={`modal-overlay ${className}`} onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        {title && <div className="modal-header">{title}</div>}
-        <div className="modal-body">{children}</div>
-        {footer && <div className="modal-footer">{footer}</div>}
-        <button className="modal-close" onClick={onClose}>
-          &times;
-        </button>
+    <>
+      <div onClick={openModal}>{trigger}</div>
+      <div className={`modal-overlay ${isOpen ? 'open' : ''} ${className}`} onClick={closeModal}>
+        <div className="modal" onClick={(e) => e.stopPropagation()}>
+          {title && <div className="modal-header">{title}</div>}
+          <div className="modal-body">{children}</div>
+          <button className="modal-close" onClick={closeModal}>
+            &times;
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
