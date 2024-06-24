@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Sidebar} from '../../../components';
+import { Sidebar } from '../../../components';
 
 const meta: Meta<typeof Sidebar> = {
   title: 'Components/Navigation/Sidebar',
@@ -14,10 +14,11 @@ const meta: Meta<typeof Sidebar> = {
     sidebarLinks: { control: 'object' },
     headerContent: { control: 'text' },
     className: { control: 'text' },
+    collapseWidth: { control: 'number' }, // New prop
   },
 };
 
-export default meta; 
+export default meta;
 
 type Story = StoryObj<typeof Sidebar>;
 
@@ -37,7 +38,7 @@ export const Default: Story = {
         <li><a href="#">Link1</a></li>
         <li><a href="#">Link2</a></li>
         <li><a href="#">Link3</a></li>
-        <li><a href="#">Link4</a></li>
+        <li><a href="#">Link4</a></li> 
       </>
     ),
     headerContent: <div>Header Content</div>,
@@ -48,6 +49,6 @@ export const Default: Story = {
         <p>This is the main content area.</p>
       </div>
     ),
+    collapseWidth: 768, 
   },
 };
-

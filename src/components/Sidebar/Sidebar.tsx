@@ -9,6 +9,7 @@ interface SidebarProps {
   headerContent?: ReactNode;
   className?: string;
   children: ReactNode;
+  collapseWidth?: number; // New prop
 }
 
 const Sidebar = ({
@@ -19,6 +20,7 @@ const Sidebar = ({
   headerContent,
   className = '',
   children,
+  collapseWidth = 768, // Default value for new prop
 }: SidebarProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
 
@@ -27,14 +29,14 @@ const Sidebar = ({
   };
 
   const handleLinkClick = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= collapseWidth) {
       setIsSidebarOpen(false);
     }
   };
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= collapseWidth) {
         setIsSidebarOpen(false);
       } else {
         setIsSidebarOpen(true);
@@ -47,7 +49,7 @@ const Sidebar = ({
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [collapseWidth]);
 
   return (
     <div className={`sidebar-layout ${className}`}>

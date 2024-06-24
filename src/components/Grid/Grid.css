@@ -40,7 +40,7 @@
  /* Desktop layout */
  @media only screen and (min-width: 768px) {
   .grid-d-1 { width: 8.33%; }
-  .grid-d-2 { width: 16.66%; }
+  .grid-d-2 { width: 16.66%; } 
   .grid-d-3 { width: 25%; }
   .grid-d-4 { width: 33.33%; }
   .grid-d-5 { width: 41.66%; }

@@ -34,6 +34,7 @@ const Select = ({
       }
     } else {
       newSelected = [option.value];
+      console.log(option.value)
       setIsOpen(false);
     }
     setSelected(newSelected);
@@ -71,6 +72,7 @@ const Select = ({
               onClick={() => handleOptionClick(option)}
             >
               {option.label}
+              
             </div>
           ))}
         </div>
