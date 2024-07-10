@@ -11,7 +11,7 @@ export default create({
 
   // 
   colorPrimary: '#3A10E5',
-  colorSecondary: '#585C6D',
+  colorSecondary: '#242424',
 
   // UI
   appBg: '#ffffff',
@@ -25,7 +25,7 @@ export default create({
   textInverseColor: '#ffffff',
 
   // Toolbar default and active colors
-  barTextColor: '#9E9E9E',
+  barTextColor: '#242424',
   barSelectedColor: '#585C6D',
   barHoverColor: '#585C6D',
   barBg: '#ffffff',
